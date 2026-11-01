@@ -1,0 +1,91 @@
+.bfk-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bfk-space-2);
+  width: 100%;
+}
+
+.bfk-field__label {
+  font-family: var(--bfk-font-sans);
+  font-size: var(--bfk-font-size-3xs);
+  letter-spacing: var(--bfk-tracking-widest);
+  text-transform: uppercase;
+  color: var(--bfk-text-muted);
+}
+
+.bfk-field__control {
+  width: 100%;
+  padding-block: var(--bfk-space-3);
+  font-family: var(--bfk-font-serif);
+  font-size: var(--bfk-font-size-lg);
+  color: var(--bfk-text-primary);
+  background: transparent;
+  border-block-end: 1px solid var(--bfk-line-subtle);
+  border-radius: 0;
+  transition:
+    border-color var(--bfk-duration-base) var(--bfk-ease-standard),
+    box-shadow var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+
+.bfk-field__control::placeholder {
+  color: var(--bfk-text-faint);
+}
+
+.bfk-field__control:hover {
+  border-color: var(--bfk-line-hairline);
+}
+
+.bfk-field__control:focus {
+  outline: none;
+  border-color: var(--bfk-accent-gold);
+  box-shadow: 0 1px 0 0 var(--bfk-accent-gold);
+}
+
+.bfk-field__control--area {
+  resize: vertical;
+  min-height: 6rem;
+  line-height: var(--bfk-leading-relaxed);
+}
+
+/* ── Select ─────────────────────────────────────────────────── */
+.bfk-field__selectWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bfk-field__control--select {
+  appearance: none;
+  padding-inline-end: var(--bfk-space-8);
+  cursor: pointer;
+}
+
+/* The native dropdown list is drawn by the OS — keep it readable. */
+.bfk-field__control--select option {
+  background: var(--bfk-color-ink-700);
+  color: var(--bfk-text-primary);
+}
+
+.bfk-field__chevron {
+  position: absolute;
+  inset-inline-end: 2px;
+  width: 12px;
+  height: 8px;
+  pointer-events: none;
+  color: var(--bfk-text-muted);
+}
+
+/* ── Messages ───────────────────────────────────────────────── */
+.bfk-field__message {
+  font-family: var(--bfk-font-sans);
+  font-size: var(--bfk-font-size-2xs);
+  color: var(--bfk-text-faint);
+}
+
+.bfk-field--invalid .bfk-field__control {
+  border-color: var(--bfk-color-ember-400);
+}
+
+.bfk-field--invalid .bfk-field__message {
+  color: var(--bfk-color-ember-300);
+}

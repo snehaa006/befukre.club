@@ -1,0 +1,8 @@
+/*
+ * Type families.
+ *   Playfair Display — display voice: high-contrast didone, set BIG and tight.
+ *   Cormorant Garamond — long-form serif, the reading voice.
+ *   Mrs Saint Delafield — the signature. One word at a time, never a sentence.
+ *   Jost — geometric sans for micro labels, nav and UI.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Mrs+Saint+Delafield&display=swap");

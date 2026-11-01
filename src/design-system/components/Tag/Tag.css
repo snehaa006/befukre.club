@@ -1,0 +1,28 @@
+.bfk-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35em 0.9em;
+  font-family: var(--bfk-font-sans);
+  font-size: var(--bfk-font-size-3xs);
+  font-weight: var(--bfk-font-weight-regular);
+  letter-spacing: var(--bfk-tracking-wider);
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid currentColor;
+  border-radius: var(--bfk-radius-pill);
+}
+
+.bfk-tag--gold { color: var(--bfk-accent-gold); }
+.bfk-tag--wine { color: var(--bfk-color-burgundy-400); }
+.bfk-tag--ember { color: var(--bfk-accent-ember); }
+.bfk-tag--neutral { color: var(--bfk-text-muted); }
+
+.bfk-tag--fill {
+  color: var(--bfk-text-primary);
+  border-color: transparent;
+}
+.bfk-tag--fill.bfk-tag--gold { background: var(--bfk-color-gold-600); color: var(--bfk-text-on-bone); }
+.bfk-tag--fill.bfk-tag--wine { background: var(--bfk-accent-wine); }
+.bfk-tag--fill.bfk-tag--ember { background: var(--bfk-accent-ember); }
+.bfk-tag--fill.bfk-tag--neutral { background: var(--bfk-color-ink-500); }

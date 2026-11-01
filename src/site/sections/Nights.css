@@ -1,0 +1,135 @@
+.nights {
+  background: var(--bfk-bg-canvas);
+}
+
+.nights__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bfk-space-4);
+  margin-block-end: clamp(2.5rem, 6vw, 4rem);
+}
+
+.nights__title {
+  font-family: var(--bfk-font-display);
+  font-size: var(--bfk-font-size-5xl);
+  font-weight: var(--bfk-font-weight-regular);
+  letter-spacing: var(--bfk-tracking-tighter);
+  color: var(--bfk-text-primary);
+}
+
+.nights__list {
+  display: block;
+  border-block-start: 1px solid var(--bfk-line-subtle);
+}
+
+/* ── Row ────────────────────────────────────────────────────── */
+.nights__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 3rem);
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(0.5rem, 2vw, 1.5rem);
+  border-block-end: 1px solid var(--bfk-line-subtle);
+  overflow: hidden;
+  transition: border-color var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+
+/* Wine wash sweeps in from the leading edge on hover. */
+.nights__row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to right, var(--bfk-color-burgundy-800), transparent 85%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--bfk-duration-slow) var(--bfk-ease-entrance);
+}
+
+.nights__row:hover::before,
+.nights__row:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.nights__row:hover,
+.nights__row:focus-visible {
+  border-color: var(--bfk-line-hairline);
+}
+
+.nights__date {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bfk-space-1);
+  min-width: 4.5rem;
+}
+
+.nights__day {
+  font-family: var(--bfk-font-display);
+  font-size: var(--bfk-font-size-3xl);
+  line-height: 0.9;
+  color: var(--bfk-accent-gold);
+}
+
+.nights__month {
+  font-size: var(--bfk-font-size-3xs);
+  letter-spacing: var(--bfk-tracking-wider);
+  text-transform: uppercase;
+  color: var(--bfk-text-faint);
+}
+
+.nights__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bfk-space-1);
+  transition: transform var(--bfk-duration-slow) var(--bfk-ease-standard);
+}
+
+.nights__row:hover .nights__body {
+  transform: translateX(10px);
+}
+
+.nights__name {
+  font-family: var(--bfk-font-display);
+  font-size: var(--bfk-font-size-2xl);
+  color: var(--bfk-text-primary);
+  transition: font-style var(--bfk-duration-fast) var(--bfk-ease-standard);
+}
+
+.nights__row:hover .nights__name {
+  font-style: italic;
+}
+
+.nights__kind {
+  color: var(--bfk-text-muted);
+}
+
+.nights__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--bfk-space-4);
+  color: var(--bfk-text-muted);
+}
+
+.nights__arrow {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition:
+    opacity var(--bfk-duration-base) var(--bfk-ease-standard),
+    transform var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+
+.nights__row:hover .nights__arrow,
+.nights__row:focus-visible .nights__arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--bfk-accent-gold);
+}
+
+@media (max-width: 620px) {
+  .nights__meta .bfk-tag {
+    display: none;
+  }
+}

@@ -1,0 +1,25 @@
+.ticker {
+  position: relative;
+  padding-block: clamp(1.1rem, 2.5vw, 1.9rem);
+  background: linear-gradient(to right, var(--bfk-color-burgundy-900), var(--bfk-color-burgundy-700), var(--bfk-color-burgundy-900));
+  border-block: 1px solid var(--bfk-line-hairline);
+  overflow: hidden;
+}
+
+.ticker__phrase {
+  font-family: var(--bfk-font-display);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.6vw, 1.9rem);
+  letter-spacing: var(--bfk-tracking-tight);
+  color: var(--bfk-text-on-wine);
+  white-space: nowrap;
+}
+
+.ticker__mark {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-inline: clamp(1.5rem, 4vw, 3.5rem);
+  background: var(--bfk-accent-gold);
+  transform: rotate(45deg);
+}

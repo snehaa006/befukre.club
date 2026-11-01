@@ -1,0 +1,132 @@
+/* Base element styling + shared primitives built on the tokens. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Lenis drives scroll; disable native smoothing when it is active. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bfk-bg-canvas);
+  color: var(--bfk-text-secondary);
+  font-family: var(--bfk-font-sans);
+  font-size: var(--bfk-font-size-base);
+  font-weight: var(--bfk-font-weight-regular);
+  line-height: var(--bfk-leading-normal);
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--bfk-accent-wine);
+  color: var(--bfk-text-primary);
+}
+
+:focus-visible {
+  outline: 1px solid var(--bfk-accent-gold);
+  outline-offset: 3px;
+  border-radius: var(--bfk-radius-xs);
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bfk-bg-sunken);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bfk-color-burgundy-700);
+  border: 3px solid var(--bfk-bg-sunken);
+  border-radius: var(--bfk-radius-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bfk-color-burgundy-500);
+}
+
+/* ── Shared primitives ──────────────────────────────────────── */
+
+/* Film grain. Sits over a surface at low opacity so flat blacks breathe. */
+.bfk-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: var(--bfk-z-raised);
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Page-wide vignette, keeps the eye centred in the dark. */
+.bfk-vignette::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 90% at 50% 35%,
+    transparent 30%,
+    rgba(7, 4, 5, 0.55) 78%,
+    rgba(7, 4, 5, 0.9) 100%
+  );
+}
+
+.bfk-container {
+  width: 100%;
+  max-width: var(--bfk-layout-content);
+  margin-inline: auto;
+  padding-inline: var(--bfk-layout-gutter);
+}
+
+.bfk-container--wide {
+  max-width: var(--bfk-layout-wide);
+}
+
+.bfk-container--flush {
+  max-width: none;
+}
+
+.bfk-section {
+  position: relative;
+  padding-block: var(--bfk-layout-section);
+}
+
+/* Visually hidden, still announced. */
+.bfk-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Motion safety ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

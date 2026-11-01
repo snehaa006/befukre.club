@@ -1,0 +1,13 @@
+/* Story-only styling — the real headline sizes live in the section CSS. */
+.sbSplit {
+  font-family: var(--bfk-font-display);
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: var(--bfk-tracking-tighter);
+  color: var(--bfk-text-primary);
+}
+
+.sbSplit__accent {
+  font-style: italic;
+  color: var(--bfk-accent-gold);
+}

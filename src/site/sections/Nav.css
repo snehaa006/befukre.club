@@ -1,0 +1,150 @@
+.nav {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  /* Above the mobile overlay, so the close button stays reachable. */
+  z-index: var(--bfk-z-modal);
+  transition: background-color var(--bfk-duration-slow) var(--bfk-ease-standard),
+    backdrop-filter var(--bfk-duration-slow) var(--bfk-ease-standard);
+}
+
+.nav--solid {
+  background: rgba(7, 4, 5, 0.72);
+  backdrop-filter: blur(14px) saturate(130%);
+  border-block-end: 1px solid var(--bfk-line-subtle);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bfk-space-6);
+  max-width: var(--bfk-layout-wide);
+  margin-inline: auto;
+  padding: var(--bfk-space-5) var(--bfk-layout-gutter);
+}
+
+.nav__brand {
+  flex: none;
+}
+
+/* ── Links ──────────────────────────────────────────────────── */
+.nav__links {
+  display: none;
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.nav__link {
+  position: relative;
+  font-size: var(--bfk-font-size-3xs);
+  letter-spacing: var(--bfk-tracking-widest);
+  text-transform: uppercase;
+  color: var(--bfk-text-muted);
+  overflow: hidden;
+  transition: color var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+
+.nav__link:hover {
+  color: var(--bfk-text-primary);
+}
+
+/* Underline wipes in from the left. */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  inset-block-end: -4px;
+  inset-inline: 0;
+  height: 1px;
+  background: var(--bfk-accent-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--bfk-duration-base) var(--bfk-ease-entrance);
+}
+
+.nav__link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--bfk-space-4);
+}
+
+.nav__cta {
+  display: none;
+}
+
+/* ── Burger ─────────────────────────────────────────────────── */
+.nav__burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+.nav__burgerBar {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--bfk-text-primary);
+  transition: transform var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+
+/* Targeted by class, not position: the button's first child is the
+   screen-reader label, so :first-child would miss the bar. */
+.nav__burger.is-open .nav__burgerBar--top {
+  transform: translateY(3.5px) rotate(45deg);
+}
+.nav__burger.is-open .nav__burgerBar--bottom {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* ── Progress ───────────────────────────────────────────────── */
+.nav__progress {
+  height: 1px;
+  background: var(--bfk-accent-gold);
+  transform-origin: left;
+  opacity: 0.55;
+}
+
+/* ── Mobile overlay ─────────────────────────────────────────── */
+.nav__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--bfk-z-overlay);
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(90% 60% at 50% 0%, var(--bfk-color-burgundy-800), transparent 70%),
+    var(--bfk-bg-canvas);
+}
+
+.nav__overlayLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bfk-space-6);
+}
+
+.nav__overlayLink {
+  font-family: var(--bfk-font-display);
+  font-size: var(--bfk-font-size-4xl);
+  color: var(--bfk-text-primary);
+  transition: color var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+
+.nav__overlayLink:hover {
+  color: var(--bfk-accent-gold);
+  font-style: italic;
+}
+
+@media (min-width: 900px) {
+  .nav__links { display: flex; }
+  .nav__cta { display: inline-flex; }
+  .nav__burger { display: none; }
+  .nav__overlay { display: none; }
+}

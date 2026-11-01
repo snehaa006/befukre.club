@@ -1,0 +1,164 @@
+.bfk-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bfk-space-3);
+  overflow: hidden;
+  isolation: isolate;
+  font-family: var(--bfk-font-sans);
+  font-weight: var(--bfk-font-weight-regular);
+  letter-spacing: var(--bfk-tracking-wider);
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: var(--bfk-radius-pill);
+  transition:
+    color var(--bfk-duration-base) var(--bfk-ease-standard),
+    border-color var(--bfk-duration-base) var(--bfk-ease-standard),
+    box-shadow var(--bfk-duration-base) var(--bfk-ease-standard),
+    transform var(--bfk-duration-fast) var(--bfk-ease-standard);
+}
+
+.bfk-button:active {
+  transform: scale(0.975);
+}
+
+.bfk-button__label,
+.bfk-button__arrow {
+  position: relative;
+  z-index: 1;
+}
+
+.bfk-button__arrow {
+  width: 1.1em;
+  height: 1.1em;
+  transition: transform var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+
+.bfk-button:hover .bfk-button__arrow,
+.bfk-button:focus-visible .bfk-button__arrow {
+  transform: translateX(4px);
+}
+
+/* Hover fill rises from the bottom edge. */
+.bfk-button__sweep {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--bfk-duration-base) var(--bfk-ease-entrance);
+}
+
+.bfk-button:hover .bfk-button__sweep,
+.bfk-button:focus-visible .bfk-button__sweep {
+  transform: scaleY(1);
+}
+
+/* ── Sizes ──────────────────────────────────────────────────── */
+.bfk-button--sm {
+  padding: var(--bfk-space-2) var(--bfk-space-5);
+  font-size: var(--bfk-font-size-3xs);
+}
+.bfk-button--md {
+  padding: var(--bfk-space-4) var(--bfk-space-8);
+  font-size: var(--bfk-font-size-2xs);
+}
+.bfk-button--lg {
+  padding: var(--bfk-space-5) var(--bfk-space-12);
+  font-size: var(--bfk-font-size-xs);
+}
+
+.bfk-button--full {
+  display: flex;
+  width: 100%;
+}
+
+/* ── Variants ───────────────────────────────────────────────── */
+.bfk-button--solid {
+  background: var(--bfk-accent-wine);
+  color: var(--bfk-text-on-wine);
+  border: 1px solid transparent;
+}
+.bfk-button--solid .bfk-button__sweep {
+  background: var(--bfk-color-burgundy-400);
+}
+.bfk-button--solid:hover,
+.bfk-button--solid:focus-visible {
+  box-shadow: var(--bfk-glow-wine);
+}
+
+.bfk-button--ember {
+  background: var(--bfk-accent-ember);
+  color: var(--bfk-text-primary);
+  border: 1px solid transparent;
+}
+.bfk-button--ember .bfk-button__sweep {
+  background: var(--bfk-color-ember-400);
+}
+.bfk-button--ember:hover,
+.bfk-button--ember:focus-visible {
+  box-shadow: var(--bfk-glow-ember);
+}
+
+.bfk-button--outline {
+  background: transparent;
+  color: var(--bfk-text-gold);
+  border: 1px solid var(--bfk-line-hairline-strong);
+}
+.bfk-button--outline .bfk-button__sweep {
+  background: var(--bfk-accent-gold);
+}
+.bfk-button--outline:hover,
+.bfk-button--outline:focus-visible {
+  color: var(--bfk-text-on-bone);
+  border-color: var(--bfk-accent-gold);
+}
+
+.bfk-button--ghost {
+  background: transparent;
+  color: var(--bfk-text-secondary);
+  border: 1px solid var(--bfk-line-subtle);
+}
+.bfk-button--ghost .bfk-button__sweep {
+  background: rgba(246, 240, 231, 0.08);
+}
+.bfk-button--ghost:hover,
+.bfk-button--ghost:focus-visible {
+  color: var(--bfk-text-primary);
+  border-color: var(--bfk-line-hairline);
+}
+
+/* Inline text link with an underline that wipes in. */
+.bfk-button--link {
+  padding: 0;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+  color: var(--bfk-text-primary);
+  border: none;
+}
+.bfk-button--link .bfk-button__sweep {
+  inset: auto 0 -4px 0;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: currentColor;
+  transition: transform var(--bfk-duration-base) var(--bfk-ease-entrance);
+}
+.bfk-button--link:hover .bfk-button__sweep,
+.bfk-button--link:focus-visible .bfk-button__sweep {
+  transform: scaleX(1);
+}
+.bfk-button--link:active {
+  transform: none;
+}
+
+.bfk-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.bfk-button:disabled .bfk-button__sweep {
+  transform: scaleY(0);
+}

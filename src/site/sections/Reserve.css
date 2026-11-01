@@ -1,0 +1,109 @@
+.reserve {
+  position: relative;
+  padding-block: var(--bfk-layout-section);
+  background:
+    radial-gradient(70% 50% at 20% 0%, var(--bfk-color-burgundy-700), transparent 65%),
+    linear-gradient(to bottom, var(--bfk-color-burgundy-900), var(--bfk-bg-canvas));
+  border-block-start: 1px solid var(--bfk-line-hairline);
+  overflow: hidden;
+}
+
+.reserve__grid {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.reserve__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--bfk-space-6);
+}
+
+.reserve__title {
+  font-family: var(--bfk-font-display);
+  font-size: var(--bfk-font-size-5xl);
+  font-weight: var(--bfk-font-weight-regular);
+  letter-spacing: var(--bfk-tracking-tighter);
+  color: var(--bfk-text-primary);
+}
+
+.reserve__body {
+  color: var(--bfk-color-bone-300);
+}
+
+/* The column is flex-start aligned — full-width children must opt in. */
+.reserve__divider {
+  align-self: stretch;
+  max-width: 24rem;
+}
+
+/* ── Hours ──────────────────────────────────────────────────── */
+.reserve__hours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bfk-space-3);
+  width: 100%;
+  max-width: 24rem;
+  margin: 0;
+}
+
+.reserve__hoursRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--bfk-space-4);
+  font-family: var(--bfk-font-sans);
+  font-size: var(--bfk-font-size-2xs);
+  letter-spacing: var(--bfk-tracking-wider);
+  text-transform: uppercase;
+  color: var(--bfk-text-muted);
+}
+
+/* Dotted leader between the day and the time. */
+.reserve__hoursRow::after {
+  content: "";
+  order: 1;
+  flex: 1;
+  border-block-end: 1px dotted var(--bfk-line-subtle);
+  translate: 0 -0.25em;
+}
+
+.reserve__hoursRow dd {
+  order: 2;
+  margin: 0;
+  color: var(--bfk-text-gold);
+}
+
+/* ── Form ───────────────────────────────────────────────────── */
+.reserve__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--bfk-space-6);
+}
+
+.reserve__span,
+.reserve__submit {
+  grid-column: 1 / -1;
+}
+
+.reserve__submit {
+  margin-block-start: var(--bfk-space-2);
+}
+
+.reserve__done {
+  min-height: 22rem;
+}
+
+@media (max-width: 520px) {
+  .reserve__form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .reserve__grid {
+    grid-template-columns: 1fr 1.05fr;
+  }
+}

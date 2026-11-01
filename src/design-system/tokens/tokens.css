@@ -1,0 +1,187 @@
+/*
+ * GENERATED FILE — do not edit.
+ * Source: src/design-system/tokens/tokens.ts
+ * Regenerate: npm run tokens
+ */
+
+:root {
+  /* color */
+  --bfk-color-ink-500: #241619;
+  --bfk-color-ink-600: #1A0F12;
+  --bfk-color-ink-700: #120A0C;
+  --bfk-color-ink-800: #0B0607;
+  --bfk-color-ink-900: #070405;
+  --bfk-color-burgundy-400: #A82836;
+  --bfk-color-burgundy-500: #8A1C2B;
+  --bfk-color-burgundy-600: #6B1623;
+  --bfk-color-burgundy-700: #51121E;
+  --bfk-color-burgundy-800: #3D0C16;
+  --bfk-color-burgundy-900: #2A0810;
+  --bfk-color-ember-300: #E8805A;
+  --bfk-color-ember-400: #DC5C30;
+  --bfk-color-ember-500: #C8441F;
+  --bfk-color-ember-600: #A6331A;
+  --bfk-color-gold-300: #E0C894;
+  --bfk-color-gold-400: #C9A66B;
+  --bfk-color-gold-500: #B2924F;
+  --bfk-color-gold-600: #8E7340;
+  --bfk-color-bone-100: #F6F0E7;
+  --bfk-color-bone-200: #E8DFD2;
+  --bfk-color-bone-300: #CFC2B2;
+  --bfk-color-bone-400: #9C8B84;
+  --bfk-color-bone-500: #6F605C;
+  --bfk-color-bone-600: #4A3E3C;
+
+  /* bg */
+  --bfk-bg-canvas: #070405;
+  --bfk-bg-raised: #120A0C;
+  --bfk-bg-sunken: #040203;
+  --bfk-bg-wine: #3D0C16;
+  --bfk-bg-wine-deep: #2A0810;
+  --bfk-bg-wine-lit: #6B1623;
+  --bfk-bg-bone: #F6F0E7;
+  --bfk-bg-scrim: rgba(7, 4, 5, 0.72);
+
+  /* text */
+  --bfk-text-primary: #F6F0E7;
+  --bfk-text-secondary: #CFC2B2;
+  --bfk-text-muted: #9C8B84;
+  --bfk-text-faint: #6F605C;
+  --bfk-text-on-wine: #F6F0E7;
+  --bfk-text-on-bone: #070405;
+  --bfk-text-gold: #C9A66B;
+  --bfk-text-ember: #DC5C30;
+
+  /* line */
+  --bfk-line-hairline: rgba(201, 166, 107, 0.26);
+  --bfk-line-hairline-strong: rgba(201, 166, 107, 0.52);
+  --bfk-line-subtle: rgba(246, 240, 231, 0.12);
+  --bfk-line-on-bone: rgba(42, 8, 16, 0.18);
+
+  /* accent */
+  --bfk-accent-wine: #6B1623;
+  --bfk-accent-ember: #C8441F;
+  --bfk-accent-gold: #C9A66B;
+
+  /* font */
+  --bfk-font-display: "Playfair Display", "Times New Roman", Times, serif;
+  --bfk-font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --bfk-font-script: "Mrs Saint Delafield", "Snell Roundhand", cursive;
+  --bfk-font-sans: "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* fontSize */
+  --bfk-font-size-3xs: 0.6875rem;
+  --bfk-font-size-2xs: 0.75rem;
+  --bfk-font-size-xs: 0.8125rem;
+  --bfk-font-size-sm: 0.9375rem;
+  --bfk-font-size-base: 1.0625rem;
+  --bfk-font-size-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
+  --bfk-font-size-xl: clamp(1.3125rem, 1.18rem + 0.6vw, 1.625rem);
+  --bfk-font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2.125rem);
+  --bfk-font-size-3xl: clamp(1.875rem, 1.5rem + 1.8vw, 2.875rem);
+  --bfk-font-size-4xl: clamp(2.375rem, 1.8rem + 2.8vw, 4rem);
+  --bfk-font-size-5xl: clamp(3rem, 2rem + 5vw, 6rem);
+  --bfk-font-size-6xl: clamp(3.75rem, 2rem + 8.5vw, 9rem);
+  --bfk-font-size-7xl: clamp(4.5rem, 1.5rem + 13vw, 14rem);
+
+  /* fontWeight */
+  --bfk-font-weight-light: 300;
+  --bfk-font-weight-regular: 400;
+  --bfk-font-weight-medium: 500;
+  --bfk-font-weight-semibold: 600;
+  --bfk-font-weight-bold: 700;
+
+  /* tracking */
+  --bfk-tracking-tighter: -0.04em;
+  --bfk-tracking-tight: -0.02em;
+  --bfk-tracking-normal: 0em;
+  --bfk-tracking-wide: 0.06em;
+  --bfk-tracking-wider: 0.16em;
+  --bfk-tracking-widest: 0.3em;
+
+  /* leading */
+  --bfk-leading-none: 1;
+  --bfk-leading-tight: 1.06;
+  --bfk-leading-snug: 1.2;
+  --bfk-leading-normal: 1.5;
+  --bfk-leading-relaxed: 1.72;
+
+  /* space */
+  --bfk-space-0: 0px;
+  --bfk-space-1: 4px;
+  --bfk-space-2: 8px;
+  --bfk-space-3: 12px;
+  --bfk-space-4: 16px;
+  --bfk-space-5: 20px;
+  --bfk-space-6: 24px;
+  --bfk-space-8: 32px;
+  --bfk-space-10: 40px;
+  --bfk-space-12: 48px;
+  --bfk-space-16: 64px;
+  --bfk-space-20: 80px;
+  --bfk-space-24: 96px;
+  --bfk-space-32: 128px;
+  --bfk-space-40: 160px;
+  --bfk-space-48: 192px;
+  --bfk-space-64: 256px;
+
+  /* radius */
+  --bfk-radius-none: 0px;
+  --bfk-radius-xs: 2px;
+  --bfk-radius-sm: 4px;
+  --bfk-radius-md: 8px;
+  --bfk-radius-lg: 16px;
+  --bfk-radius-xl: 28px;
+  --bfk-radius-pill: 999px;
+  --bfk-radius-arch: 50% 50% 4px 4px / 42% 42% 4px 4px;
+
+  /* shadow */
+  --bfk-shadow-1: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --bfk-shadow-2: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --bfk-shadow-3: 0 32px 90px rgba(0, 0, 0, 0.62);
+
+  /* glow */
+  --bfk-glow-ember: 0 0 70px rgba(200, 68, 31, 0.3);
+  --bfk-glow-ember-tight: 0 0 26px rgba(200, 68, 31, 0.45);
+  --bfk-glow-wine: 0 0 90px rgba(107, 22, 35, 0.55);
+  --bfk-glow-gold: 0 0 28px rgba(201, 166, 107, 0.32);
+
+  /* duration */
+  --bfk-duration-instant: 120ms;
+  --bfk-duration-fast: 220ms;
+  --bfk-duration-base: 420ms;
+  --bfk-duration-slow: 700ms;
+  --bfk-duration-slower: 1100ms;
+  --bfk-duration-cinematic: 1600ms;
+
+  /* ease */
+  --bfk-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --bfk-ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --bfk-ease-exit: cubic-bezier(0.5, 0, 0.75, 0);
+  --bfk-ease-silk: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --bfk-ease-linear: linear;
+
+  /* layout */
+  --bfk-layout-content: 1320px;
+  --bfk-layout-wide: 1600px;
+  --bfk-layout-prose: 64ch;
+  --bfk-layout-gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --bfk-layout-section: clamp(5rem, 11vh + 4rem, 11rem);
+
+  /* z */
+  --bfk-z-below: -1;
+  --bfk-z-base: 0;
+  --bfk-z-raised: 10;
+  --bfk-z-sticky: 100;
+  --bfk-z-nav: 200;
+  --bfk-z-overlay: 500;
+  --bfk-z-modal: 1000;
+  --bfk-z-cursor: 9999;
+
+  /* breakpoint */
+  --bfk-breakpoint-sm: 480px;
+  --bfk-breakpoint-md: 768px;
+  --bfk-breakpoint-lg: 1024px;
+  --bfk-breakpoint-xl: 1280px;
+  --bfk-breakpoint-2xl: 1536px;
+}

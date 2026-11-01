@@ -1,0 +1,32 @@
+.bfk-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bfk-space-3);
+  font-family: var(--bfk-font-sans);
+  font-size: var(--bfk-font-size-3xs);
+  font-weight: var(--bfk-font-weight-regular);
+  letter-spacing: var(--bfk-tracking-widest);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.bfk-eyebrow__label {
+  /* Tracking adds a trailing gap; pull it back so the rule sits true. */
+  margin-inline-end: calc(var(--bfk-tracking-widest) * -1);
+}
+
+.bfk-eyebrow--muted { color: var(--bfk-text-muted); }
+.bfk-eyebrow--gold { color: var(--bfk-text-gold); }
+.bfk-eyebrow--ember { color: var(--bfk-text-ember); }
+.bfk-eyebrow--primary { color: var(--bfk-text-primary); }
+
+.bfk-eyebrow--rule-before::before,
+.bfk-eyebrow--rule-both::before,
+.bfk-eyebrow--rule-after::after,
+.bfk-eyebrow--rule-both::after {
+  content: "";
+  width: clamp(1.5rem, 4vw, 3.5rem);
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+}

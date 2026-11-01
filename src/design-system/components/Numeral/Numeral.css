@@ -1,0 +1,22 @@
+.bfk-numeral {
+  display: block;
+  font-family: var(--bfk-font-display);
+  font-weight: var(--bfk-font-weight-regular);
+  line-height: 0.82;
+  letter-spacing: var(--bfk-tracking-tighter);
+  font-variant-numeric: lining-nums;
+}
+
+.bfk-numeral--md { font-size: var(--bfk-font-size-5xl); }
+.bfk-numeral--lg { font-size: var(--bfk-font-size-6xl); }
+.bfk-numeral--xl { font-size: var(--bfk-font-size-7xl); }
+
+.bfk-numeral--primary { color: var(--bfk-text-primary); }
+.bfk-numeral--gold { color: var(--bfk-accent-gold); }
+.bfk-numeral--ember { color: var(--bfk-accent-ember); }
+
+/* Hollow figures, so an image can show through behind them. */
+.bfk-numeral--outline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--bfk-line-hairline-strong);
+}

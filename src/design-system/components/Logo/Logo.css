@@ -1,0 +1,57 @@
+.bfk-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bfk-space-3);
+  line-height: 1;
+}
+
+.bfk-logo--lockup {
+  flex-direction: column;
+  gap: var(--bfk-space-5);
+}
+
+.bfk-logo__mark {
+  width: auto;
+  flex: none;
+}
+
+.bfk-logo__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bfk-space-2);
+}
+
+.bfk-logo__word {
+  font-family: var(--bfk-font-display);
+  font-weight: var(--bfk-font-weight-regular);
+  letter-spacing: var(--bfk-tracking-wider);
+  /* The wordmark is set in caps; the tracking is what makes it read as a mark. */
+  text-transform: uppercase;
+}
+
+.bfk-logo__tagline {
+  font-family: var(--bfk-font-sans);
+  font-weight: var(--bfk-font-weight-light);
+  letter-spacing: var(--bfk-tracking-widest);
+  text-transform: lowercase;
+  opacity: 0.72;
+}
+
+/* ── Sizes ──────────────────────────────────────────────────── */
+.bfk-logo--sm .bfk-logo__mark { height: 20px; }
+.bfk-logo--sm .bfk-logo__word { font-size: var(--bfk-font-size-sm); }
+.bfk-logo--sm .bfk-logo__tagline { font-size: var(--bfk-font-size-3xs); }
+
+.bfk-logo--md .bfk-logo__mark { height: 34px; }
+.bfk-logo--md .bfk-logo__word { font-size: var(--bfk-font-size-xl); }
+.bfk-logo--md .bfk-logo__tagline { font-size: var(--bfk-font-size-2xs); }
+
+.bfk-logo--lg .bfk-logo__mark { height: clamp(44px, 7vw, 76px); }
+.bfk-logo--lg .bfk-logo__word { font-size: var(--bfk-font-size-4xl); }
+.bfk-logo--lg .bfk-logo__tagline { font-size: var(--bfk-font-size-xs); }
+
+/* ── Tones ──────────────────────────────────────────────────── */
+.bfk-logo--bone { color: var(--bfk-text-primary); }
+.bfk-logo--gold { color: var(--bfk-accent-gold); }
+.bfk-logo--ink { color: var(--bfk-text-on-bone); }

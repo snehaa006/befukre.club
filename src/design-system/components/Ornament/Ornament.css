@@ -1,0 +1,61 @@
+.bfk-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bfk-space-4);
+  width: 100%;
+}
+
+.bfk-ornament--gold { color: var(--bfk-accent-gold); }
+.bfk-ornament--ember { color: var(--bfk-accent-ember); }
+.bfk-ornament--subtle { color: var(--bfk-text-faint); }
+
+/* A plain hairline. */
+.bfk-ornament--rule {
+  height: 1px;
+  background: currentColor;
+  opacity: 0.26;
+}
+
+/* Line — diamond — line. */
+.bfk-ornament--diamond::before,
+.bfk-ornament--diamond::after,
+.bfk-ornament--crest::before,
+.bfk-ornament--crest::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, currentColor);
+  opacity: 0.32;
+}
+
+.bfk-ornament--diamond::after,
+.bfk-ornament--crest::after {
+  background: linear-gradient(to left, transparent, currentColor);
+}
+
+.bfk-ornament__mark {
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+
+.bfk-ornament__crest {
+  width: 40px;
+  height: 24px;
+  flex: none;
+}
+
+.bfk-ornament__dots {
+  display: flex;
+  gap: var(--bfk-space-2);
+}
+
+.bfk-ornament__dots i {
+  width: 3px;
+  height: 3px;
+  border-radius: var(--bfk-radius-pill);
+  background: currentColor;
+  opacity: 0.6;
+}

@@ -1,0 +1,5 @@
+/** BEFUKRE design system — public surface. */
+export * from './components/index.ts'
+export * from './hooks/index.ts'
+export * from './utils/index.ts'
+export * from './tokens/tokens.ts'

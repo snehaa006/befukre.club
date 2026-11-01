@@ -1,0 +1,44 @@
+.bfk-card {
+  position: relative;
+  border-radius: var(--bfk-radius-sm);
+  transition:
+    transform var(--bfk-duration-slow) var(--bfk-ease-standard),
+    border-color var(--bfk-duration-slow) var(--bfk-ease-standard),
+    box-shadow var(--bfk-duration-slow) var(--bfk-ease-standard);
+}
+
+.bfk-card--ink {
+  background: linear-gradient(to bottom, var(--bfk-color-ink-700), var(--bfk-color-ink-800));
+  border: 1px solid var(--bfk-line-subtle);
+  color: var(--bfk-text-secondary);
+}
+
+.bfk-card--wine {
+  background: linear-gradient(150deg, var(--bfk-color-burgundy-700), var(--bfk-color-burgundy-900));
+  border: 1px solid var(--bfk-line-hairline);
+  color: var(--bfk-text-on-wine);
+}
+
+.bfk-card--outline {
+  background: transparent;
+  border: 1px solid var(--bfk-line-hairline);
+  color: var(--bfk-text-secondary);
+}
+
+.bfk-card--bone {
+  background: var(--bfk-bg-bone);
+  border: 1px solid var(--bfk-line-on-bone);
+  color: var(--bfk-text-on-bone);
+}
+
+.bfk-card--pad-none { padding: 0; }
+.bfk-card--pad-sm { padding: var(--bfk-space-5); }
+.bfk-card--pad-md { padding: var(--bfk-space-8); }
+.bfk-card--pad-lg { padding: var(--bfk-space-12); }
+
+.bfk-card--interactive:hover,
+.bfk-card--interactive:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--bfk-line-hairline-strong);
+  box-shadow: var(--bfk-shadow-2);
+}

@@ -1,0 +1,26 @@
+.bfk-split {
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* Word gap comes from the flex gap, not a space glyph. */
+  column-gap: 0.26em;
+  row-gap: 0;
+  align-items: baseline;
+}
+
+.bfk-split--char {
+  column-gap: 0;
+}
+
+/* Each unit gets its own clipping window so it can rise from nothing. */
+.bfk-split__clip {
+  display: inline-block;
+  overflow: hidden;
+  /* Descenders would be shaved by a tight box — pad and pull back. */
+  padding-block-end: 0.14em;
+  margin-block-end: -0.14em;
+}
+
+.bfk-split__unit {
+  display: inline-block;
+  will-change: transform;
+}

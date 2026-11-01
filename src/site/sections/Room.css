@@ -1,0 +1,79 @@
+.room {
+  background:
+    radial-gradient(70% 50% at 10% 0%, rgba(61, 12, 22, 0.55), transparent 65%),
+    var(--bfk-bg-canvas);
+}
+
+.room__grid {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  align-items: center;
+}
+
+.room__figure {
+  max-width: 30rem;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.room__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--bfk-space-6);
+}
+
+.room__title {
+  max-width: 18ch;
+  font-family: var(--bfk-font-display);
+  font-size: var(--bfk-font-size-4xl);
+  font-weight: var(--bfk-font-weight-regular);
+  line-height: var(--bfk-leading-tight);
+  letter-spacing: var(--bfk-tracking-tight);
+  color: var(--bfk-text-primary);
+}
+
+/* Each paragraph is wrapped by a StaggerItem, so they are never adjacent
+   siblings — space the wrappers instead. */
+.room__prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bfk-space-5);
+  width: 100%;
+}
+
+/* The column is flex-start aligned, so full-width children must say so. */
+.room__divider {
+  align-self: stretch;
+}
+
+/* ── Stats ──────────────────────────────────────────────────── */
+.room__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--bfk-space-6);
+  width: 100%;
+  padding-block-start: var(--bfk-space-4);
+}
+
+.room__stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bfk-space-2);
+}
+
+.room__statValue {
+  font-family: var(--bfk-font-display);
+  font-size: var(--bfk-font-size-3xl);
+  line-height: 1;
+  color: var(--bfk-accent-gold);
+}
+
+@media (min-width: 900px) {
+  .room__grid {
+    grid-template-columns: 0.85fr 1fr;
+  }
+  .room__figure {
+    max-width: none;
+  }
+}

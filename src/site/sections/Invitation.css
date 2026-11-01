@@ -1,0 +1,82 @@
+.invitation {
+  position: relative;
+  padding-block: var(--bfk-layout-section);
+  background:
+    radial-gradient(90% 60% at 50% 0%, var(--bfk-color-burgundy-700), transparent 70%),
+    linear-gradient(to bottom, var(--bfk-color-burgundy-900), var(--bfk-color-ink-900));
+  border-block: 1px solid var(--bfk-line-hairline);
+  overflow: hidden;
+}
+
+.invitation__stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+
+.invitation__eyebrow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Date — image — time, stacked on small screens and interlocked on large. */
+.invitation__composition {
+  display: grid;
+  justify-items: center;
+  gap: var(--bfk-space-6);
+  width: 100%;
+}
+
+/* The column is `auto` and the grid is centre-aligned, so a percentage width
+   has nothing definite to resolve against. Size the figure in absolute units. */
+.invitation__figure {
+  width: clamp(13rem, 62vw, 20rem);
+}
+
+.invitation__date,
+.invitation__time {
+  color: var(--bfk-text-primary);
+}
+
+.invitation__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bfk-space-6);
+  text-align: center;
+}
+
+.invitation__title {
+  font-style: italic;
+}
+
+.invitation__body {
+  max-width: 52ch;
+  color: var(--bfk-color-bone-300);
+}
+
+@media (min-width: 900px) {
+  .invitation__composition {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 3rem);
+  }
+
+  /* Numerals overlap the image edges, as on the printed card. */
+  .invitation__date {
+    justify-self: end;
+    transform: translate(clamp(1rem, 3vw, 3rem), -2.5rem);
+  }
+
+  .invitation__time {
+    justify-self: start;
+    transform: translate(clamp(-3rem, -3vw, -1rem), 2.5rem);
+  }
+
+  .invitation__figure {
+    width: clamp(16rem, 25vw, 24rem);
+    z-index: 1;
+  }
+}

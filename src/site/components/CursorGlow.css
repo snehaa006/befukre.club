@@ -1,0 +1,19 @@
+.cursorGlow {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: var(--bfk-z-cursor);
+  width: 42rem;
+  height: 42rem;
+  /* The motion values position the centre, not the corner. */
+  margin-block-start: -21rem;
+  margin-inline-start: -21rem;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  background: radial-gradient(
+    closest-side,
+    rgba(232, 128, 90, 0.5),
+    rgba(200, 68, 31, 0.18) 45%,
+    transparent 72%
+  );
+}

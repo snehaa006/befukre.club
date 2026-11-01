@@ -1,0 +1,12 @@
+/* Stage wrapper for stories — keeps components off the canvas edge. */
+.sb-stage {
+  padding: 2rem;
+  color: var(--bfk-text-secondary);
+  font-family: var(--bfk-font-sans);
+}
+
+/* Docs pages render on a light canvas; keep the samples legible there. */
+.sbdocs-preview,
+.docs-story {
+  background: var(--bfk-bg-canvas) !important;
+}

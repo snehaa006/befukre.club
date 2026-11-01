@@ -1,0 +1,80 @@
+.spec {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: min(72rem, 100%);
+  color: var(--bfk-text-secondary);
+}
+
+.spec__row {
+  display: grid;
+  gap: 1rem;
+  padding-block-end: 1.75rem;
+  border-block-end: 1px solid var(--bfk-line-subtle);
+}
+
+.spec__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.spec__label {
+  font-family: var(--bfk-font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--bfk-text-muted);
+}
+
+.spec__hint {
+  font-family: var(--bfk-font-sans);
+  font-size: 0.75rem;
+  color: var(--bfk-text-faint);
+}
+
+.spec__code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--bfk-text-gold);
+}
+
+.spec__demo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* The demo area is a flex row, so the grid must claim the full width itself. */
+.spec__grid {
+  display: grid;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.spec__swatch {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.spec__chip {
+  height: 5.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--bfk-line-subtle);
+}
+
+.spec__swatch figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.spec__swatchName {
+  font-family: var(--bfk-font-sans);
+  font-size: 0.8125rem;
+  color: var(--bfk-text-primary);
+}

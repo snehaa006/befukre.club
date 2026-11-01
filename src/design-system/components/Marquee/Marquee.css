@@ -1,0 +1,55 @@
+.bfk-marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.bfk-marquee__track {
+  display: flex;
+  flex: none;
+  align-items: center;
+  min-width: 100%;
+  animation: bfk-marquee-scroll var(--bfk-marquee-speed, 38s) linear infinite;
+}
+
+.bfk-marquee--right .bfk-marquee__track {
+  animation-direction: reverse;
+}
+
+.bfk-marquee--pausable:hover .bfk-marquee__track {
+  animation-play-state: paused;
+}
+
+.bfk-marquee__item {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+}
+
+.bfk-marquee__sep {
+  display: inline-flex;
+  padding-inline: var(--bfk-space-8);
+  color: var(--bfk-accent-gold);
+  opacity: 0.6;
+}
+
+.bfk-marquee--fade {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+
+@keyframes bfk-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bfk-marquee__track {
+    animation: none;
+  }
+  /* Without motion the clone is pure duplication — hide it. */
+  .bfk-marquee__track[aria-hidden="true"] {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+.bfk-reveal {
+  will-change: transform, opacity;
+}
+
+/* Mask and wipe need their own clipping context. */
+.bfk-reveal--clip {
+  overflow: hidden;
+}
+
+.bfk-stagger {
+  display: contents;
+}
+
+/* When the parent must carry layout, opt back in. */
+.bfk-stagger--block {
+  display: block;
+}
