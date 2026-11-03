@@ -89,31 +89,31 @@
   box-shadow: var(--bfk-glow-wine);
 }
 
-.bfk-button--ember {
-  background: var(--bfk-accent-ember);
+.bfk-button--cherry {
+  background: var(--bfk-accent-cherry);
   color: var(--bfk-text-primary);
   border: 1px solid transparent;
 }
-.bfk-button--ember .bfk-button__sweep {
-  background: var(--bfk-color-ember-400);
+.bfk-button--cherry .bfk-button__sweep {
+  background: var(--bfk-color-cherry-400);
 }
-.bfk-button--ember:hover,
-.bfk-button--ember:focus-visible {
-  box-shadow: var(--bfk-glow-ember);
+.bfk-button--cherry:hover,
+.bfk-button--cherry:focus-visible {
+  box-shadow: var(--bfk-glow-cherry);
 }
 
 .bfk-button--outline {
   background: transparent;
-  color: var(--bfk-text-gold);
+  color: var(--bfk-text-olive);
   border: 1px solid var(--bfk-line-hairline-strong);
 }
 .bfk-button--outline .bfk-button__sweep {
-  background: var(--bfk-accent-gold);
+  background: var(--bfk-accent-olive);
 }
 .bfk-button--outline:hover,
 .bfk-button--outline:focus-visible {
-  color: var(--bfk-text-on-bone);
-  border-color: var(--bfk-accent-gold);
+  color: var(--bfk-text-on-cream);
+  border-color: var(--bfk-accent-olive);
 }
 
 .bfk-button--ghost {

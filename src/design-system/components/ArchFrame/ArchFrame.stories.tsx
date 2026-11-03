@@ -14,7 +14,7 @@ const meta: Meta<typeof ArchFrame> = {
     },
   },
   args: { tone: 'wine', bordered: true, keyhole: false },
-  argTypes: { tone: { control: 'inline-radio', options: ['wine', 'ink', 'bone'] } },
+  argTypes: { tone: { control: 'inline-radio', options: ['wine', 'ink', 'cream'] } },
   decorators: [(Story) => <div style={{ width: 'min(22rem, 100%)', minHeight: '24rem', display: 'flex' }}><Story /></div>],
 }
 export default meta
@@ -22,7 +22,7 @@ type Story = StoryObj<typeof ArchFrame>
 
 const Body = () => (
   <>
-    <Text variant="script" tone="gold">Noted</Text>
+    <Text variant="script" tone="olive">Noted</Text>
     <Text variant="body" align="center">
       We will confirm by WhatsApp on the number you left.
     </Text>
@@ -31,6 +31,6 @@ const Body = () => (
 
 export const Wine: Story = { args: { children: <Body /> } }
 export const Ink: Story = { args: { tone: 'ink', children: <Body /> } }
-export const Bone: Story = { args: { tone: 'bone', children: <Body /> } }
+export const Cream: Story = { args: { tone: 'cream', children: <Body /> } }
 export const Keyhole: Story = { args: { keyhole: true, children: <Body /> } }
 export const Unbordered: Story = { args: { bordered: false, children: <Body /> } }

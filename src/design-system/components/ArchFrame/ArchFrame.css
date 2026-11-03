@@ -37,9 +37,9 @@
   color: var(--bfk-text-primary);
 }
 
-.bfk-arch--bone {
-  background: linear-gradient(to bottom, var(--bfk-bg-bone), var(--bfk-color-bone-200));
-  color: var(--bfk-text-on-bone);
+.bfk-arch--cream {
+  background: linear-gradient(to bottom, var(--bfk-bg-paper), var(--bfk-color-cream-200));
+  color: var(--bfk-text-on-cream);
 }
 
 /* Gilt rule tracking the arch silhouette. */
@@ -53,6 +53,6 @@
   border-radius: inherit;
 }
 
-.bfk-arch--bone.bfk-arch--bordered::before {
-  border-color: var(--bfk-line-on-bone);
+.bfk-arch--cream.bfk-arch--bordered::before {
+  border-color: var(--bfk-line-on-cream);
 }

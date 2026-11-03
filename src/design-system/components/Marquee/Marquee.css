@@ -30,7 +30,7 @@
 .bfk-marquee__sep {
   display: inline-flex;
   padding-inline: var(--bfk-space-8);
-  color: var(--bfk-accent-gold);
+  color: var(--bfk-accent-olive);
   opacity: 0.6;
 }
 

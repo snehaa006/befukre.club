@@ -6,7 +6,7 @@ export interface EyebrowProps {
   children: ReactNode
   /** Hairline rules flanking the label, as in the reference corner captions. */
   rule?: 'none' | 'before' | 'after' | 'both'
-  tone?: 'muted' | 'gold' | 'ember' | 'primary'
+  tone?: 'muted' | 'olive' | 'cherry' | 'primary'
   className?: string
 }
 

@@ -1,0 +1,124 @@
+.wall {
+  position: relative;
+  min-height: max(118svh, 58rem);
+  padding: clamp(6rem, 13vh, 9rem) var(--bfk-layout-gutter) var(--bfk-space-16);
+  overflow: clip;
+  color: var(--bfk-color-burgundy-800);
+}
+
+.wall::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(70% 60% at 50% 50%, rgba(244, 235, 221, 0.3), rgba(78, 64, 56, 0.25));
+}
+
+.wall__head {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: var(--bfk-space-4);
+  text-align: center;
+  pointer-events: none;
+}
+
+.wall__head > * {
+  pointer-events: auto;
+}
+
+.wall__title {
+  font-size: clamp(6rem, 24vw, 22rem);
+  line-height: 0.8;
+  color: var(--bfk-color-burgundy-700);
+  opacity: 0.92;
+}
+
+.wall__title span {
+  color: var(--bfk-color-cherry-500);
+}
+
+.wall__hint {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--bfk-space-3);
+  max-width: 46ch;
+  margin: 0;
+  font-size: var(--bfk-font-size-sm);
+  color: var(--bfk-color-burgundy-600);
+}
+
+.wall__button {
+  padding: 0.5rem 0.9rem 0.4rem;
+  font-family: var(--bfk-font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--bfk-color-cream-100);
+  background: var(--bfk-color-cherry-400);
+  border-radius: var(--bfk-radius-pill);
+  box-shadow: 0 0 0 3px #faf5ec;
+  transform: rotate(-3deg);
+}
+
+.wall__count {
+  min-width: 5ch;
+  font-size: var(--bfk-font-size-2xs);
+  letter-spacing: var(--bfk-tracking-wide);
+  text-transform: uppercase;
+}
+
+/* The lace palette card, centred over the title. */
+.wall__lace {
+  position: relative;
+  z-index: 2;
+  width: min(72vw, 15rem);
+  margin: var(--bfk-space-10) auto 0;
+  transform: rotate(2deg);
+}
+
+.wall__swatches {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wall__swatch {
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
+  padding: 1.2rem 1rem 0.8rem;
+}
+
+.wall__swatch img {
+  width: 48%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.wall__swatch span {
+  font-size: 0.6rem;
+  letter-spacing: var(--bfk-tracking-wide);
+  text-transform: lowercase;
+  color: var(--bfk-color-cream-200);
+}
+
+.wall__item {
+  z-index: 3;
+}
+
+.wall__slap {
+  position: absolute;
+  z-index: 30;
+  translate: -50% -50%;
+}
+
+@media (max-width: 759px) {
+  .wall { min-height: 150svh; }
+  .wall__item { scale: 0.72; }
+}

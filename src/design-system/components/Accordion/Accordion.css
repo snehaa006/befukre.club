@@ -44,7 +44,7 @@
   font-size: var(--bfk-font-size-2xs);
   letter-spacing: var(--bfk-tracking-wider);
   text-transform: uppercase;
-  color: var(--bfk-text-gold);
+  color: var(--bfk-text-olive);
   white-space: nowrap;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .is-open .bfk-accordion__sign {
-  color: var(--bfk-accent-gold);
+  color: var(--bfk-accent-olive);
 }
 
 .bfk-accordion__panel {

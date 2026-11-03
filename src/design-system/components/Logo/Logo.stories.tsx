@@ -11,11 +11,11 @@ const meta: Meta<typeof Logo> = {
       },
     },
   },
-  args: { variant: 'lockup', size: 'md', tone: 'bone', tagline: 'cocktail club' },
+  args: { variant: 'lockup', size: 'md', tone: 'cream', tagline: 'cocktail club' },
   argTypes: {
     variant: { control: 'inline-radio', options: ['mark', 'wordmark', 'lockup'] },
     size: { control: 'inline-radio', options: ['sm', 'md', 'lg'] },
-    tone: { control: 'inline-radio', options: ['bone', 'gold', 'ink'] },
+    tone: { control: 'inline-radio', options: ['cream', 'olive', 'ink'] },
   },
 }
 export default meta
@@ -24,8 +24,8 @@ type Story = StoryObj<typeof Logo>
 export const Lockup: Story = {}
 export const Wordmark: Story = { args: { variant: 'wordmark' } }
 export const Mark: Story = { args: { variant: 'mark' } }
-export const Gold: Story = { args: { tone: 'gold', size: 'lg' } }
-export const OnBone: Story = {
+export const Olive: Story = { args: { tone: 'olive', size: 'lg' } }
+export const OnCream: Story = {
   args: { tone: 'ink', size: 'lg' },
-  globals: { backgrounds: { value: 'bone' } },
+  globals: { backgrounds: { value: 'cream' } },
 }

@@ -6,8 +6,8 @@
   width: 100%;
 }
 
-.bfk-ornament--gold { color: var(--bfk-accent-gold); }
-.bfk-ornament--ember { color: var(--bfk-accent-ember); }
+.bfk-ornament--olive { color: var(--bfk-accent-olive); }
+.bfk-ornament--cherry { color: var(--bfk-accent-cherry); }
 .bfk-ornament--subtle { color: var(--bfk-text-faint); }
 
 /* A plain hairline. */

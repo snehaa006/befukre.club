@@ -1,0 +1,141 @@
+/* Site-wide pieces that aren't design-system components. */
+
+html.is-loading,
+html.is-loading body {
+  overflow: hidden;
+}
+
+/* The custom cursor replaces the arrow on mouse devices — never in fields. */
+html.has-cursor,
+html.has-cursor * {
+  cursor: none !important;
+}
+html.has-cursor input,
+html.has-cursor textarea,
+html.has-cursor select {
+  cursor: text !important;
+}
+html.has-cursor select {
+  cursor: pointer !important;
+}
+
+/* Moving film grain over everything. */
+.site-grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 900;
+  pointer-events: none;
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: site-grain 0.9s steps(4) infinite;
+}
+
+@keyframes site-grain {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3%, 2%); }
+  50% { transform: translate(2%, -4%); }
+  75% { transform: translate(-1%, 3%); }
+  100% { transform: translate(3%, -1%); }
+}
+
+/* "[01] The room" — the bracketed index from the Lumen reference. */
+.bracket {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6em;
+  font-family: var(--bfk-font-sans);
+  font-size: var(--bfk-font-size-2xs);
+  font-weight: var(--bfk-font-weight-medium);
+  letter-spacing: var(--bfk-tracking-wide);
+  text-transform: uppercase;
+}
+.bracket__n {
+  font-variant-numeric: tabular-nums;
+  color: var(--bracket-accent, var(--bfk-text-olive));
+}
+
+/* Leather swatches from the palette card, as full fields. */
+.leather {
+  position: relative;
+  isolation: isolate;
+}
+.leather::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}
+.leather--olive { background-color: var(--bfk-bg-olive); color: var(--bfk-color-olive-100); }
+.leather--olive::before { background-image: url("/photos/leather-olive.webp"); opacity: 0.85; }
+.leather--burgundy { background-color: var(--bfk-color-burgundy-700); color: var(--bfk-text-primary); }
+.leather--burgundy::before { background-image: url("/photos/leather-burgundy.webp"); opacity: 0.9; }
+.leather--cream { background-color: var(--bfk-bg-cream); color: var(--bfk-text-on-paper); }
+.leather--cream::before { background-image: url("/photos/leather-cream.webp"); opacity: 0.9; }
+
+/* Big poster type, shared by every section title. */
+.poster {
+  margin: 0;
+  font-family: var(--bfk-font-display);
+  font-weight: var(--bfk-font-weight-regular);
+  line-height: 0.84;
+  letter-spacing: var(--bfk-tracking-poster);
+  text-transform: uppercase;
+}
+
+.script {
+  font-family: var(--bfk-font-script);
+  font-weight: var(--bfk-font-weight-regular);
+  line-height: 1;
+  text-transform: none;
+}
+
+/* Pill / outline buttons in the Lumen style: square, condensed caps. */
+.cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8em;
+  padding: 0.85em 1.3em 0.75em;
+  font-family: var(--bfk-font-display);
+  font-size: var(--bfk-font-size-xl);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--bfk-text-primary);
+  white-space: nowrap;
+  border: 1.5px solid currentColor;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--bfk-text-primary);
+  transform: translateY(101%);
+  transition: transform var(--bfk-duration-base) var(--bfk-ease-entrance);
+}
+.cta:hover,
+.cta:focus-visible {
+  color: var(--bfk-color-burgundy-800);
+}
+.cta:hover::before,
+.cta:focus-visible::before {
+  transform: translateY(0);
+}
+.cta__arrow {
+  width: 0.8em;
+  height: 0.8em;
+  transition: transform var(--bfk-duration-base) var(--bfk-ease-standard);
+}
+.cta:hover .cta__arrow {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-grain { animation: none; }
+}

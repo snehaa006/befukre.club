@@ -5,15 +5,15 @@ export type OrnamentVariant = 'rule' | 'diamond' | 'crest' | 'dots'
 
 export interface OrnamentProps {
   variant?: OrnamentVariant
-  tone?: 'gold' | 'subtle' | 'ember'
+  tone?: 'olive' | 'subtle' | 'cherry'
   className?: string
 }
 
 /**
  * Hairline dividers and small gilt marks. The references separate blocks with
- * a thin gold line and a centred motif rather than whitespace alone.
+ * a thin olive line and a centred motif rather than whitespace alone.
  */
-export function Ornament({ variant = 'rule', tone = 'gold', className }: OrnamentProps) {
+export function Ornament({ variant = 'rule', tone = 'olive', className }: OrnamentProps) {
   return (
     <div
       className={cx('bfk-ornament', `bfk-ornament--${variant}`, `bfk-ornament--${tone}`, className)}

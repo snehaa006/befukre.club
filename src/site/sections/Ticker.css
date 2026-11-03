@@ -1,25 +1,47 @@
 .ticker {
   position: relative;
-  padding-block: clamp(1.1rem, 2.5vw, 1.9rem);
-  background: linear-gradient(to right, var(--bfk-color-burgundy-900), var(--bfk-color-burgundy-700), var(--bfk-color-burgundy-900));
-  border-block: 1px solid var(--bfk-line-hairline);
-  overflow: hidden;
+  height: clamp(15rem, 32vw, 26rem);
+  overflow: clip;
+  background: var(--bfk-color-ink-900);
 }
 
-.ticker__phrase {
+.ticker__band {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  top: 50%;
+  padding-block: 0.6rem 0.45rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.ticker__band--cream {
+  background: var(--bfk-color-cream-200);
+  color: var(--bfk-color-burgundy-700);
+  transform: translateY(-50%) rotate(5deg);
+}
+
+.ticker__band--cherry {
+  background: var(--bfk-color-cherry-500);
+  color: var(--bfk-color-cream-100);
+  transform: translateY(-50%) rotate(-4deg);
+  border-block: 4px solid #faf5ec;
+}
+
+.ticker__item {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--bfk-font-display);
-  font-style: italic;
-  font-size: clamp(1.1rem, 2.6vw, 1.9rem);
-  letter-spacing: var(--bfk-tracking-tight);
-  color: var(--bfk-text-on-wine);
+  font-size: clamp(2.6rem, 6.5vw, 6rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
-.ticker__mark {
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-inline: clamp(1.5rem, 4vw, 3.5rem);
-  background: var(--bfk-accent-gold);
-  transform: rotate(45deg);
+.ticker__sep {
+  height: 0.82em;
+  width: auto;
+  margin-inline: 0.45em;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
+  transform: rotate(-10deg);
 }

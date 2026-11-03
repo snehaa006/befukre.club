@@ -10,7 +10,7 @@ const meta: Meta = {
     docs: {
       description: {
         component:
-          'Four families with one job each. Playfair shouts, Cormorant reads, Jost labels, and Mrs Saint Delafield signs — one word at a time.',
+          'Four families with one job each. Bebas Neue shouts, Imbue sets the numbers, Instrument Sans reads and labels, and Pinyon Script signs — one word at a time.',
       },
     },
   },

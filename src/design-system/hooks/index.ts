@@ -1,4 +1,6 @@
 export { usePrefersReducedMotion } from './usePrefersReducedMotion.ts'
-export { useLenis } from './useLenis.ts'
+export { useLenis, lenisRef } from './useLenis.ts'
 export { useParallax, type ParallaxResult } from './useParallax.ts'
 export { useMagnetic, type MagneticResult } from './useMagnetic.ts'
+export { useFinePointer } from './useFinePointer.ts'
+export { useScrollSkew } from './useScrollSkew.ts'

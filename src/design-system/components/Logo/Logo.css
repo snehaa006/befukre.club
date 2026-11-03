@@ -52,6 +52,6 @@
 .bfk-logo--lg .bfk-logo__tagline { font-size: var(--bfk-font-size-xs); }
 
 /* ── Tones ──────────────────────────────────────────────────── */
-.bfk-logo--bone { color: var(--bfk-text-primary); }
-.bfk-logo--gold { color: var(--bfk-accent-gold); }
-.bfk-logo--ink { color: var(--bfk-text-on-bone); }
+.bfk-logo--cream { color: var(--bfk-text-primary); }
+.bfk-logo--olive { color: var(--bfk-accent-olive); }
+.bfk-logo--ink { color: var(--bfk-text-on-cream); }

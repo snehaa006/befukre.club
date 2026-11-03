@@ -13,16 +13,16 @@
   border-radius: var(--bfk-radius-pill);
 }
 
-.bfk-tag--gold { color: var(--bfk-accent-gold); }
+.bfk-tag--olive { color: var(--bfk-accent-olive); }
 .bfk-tag--wine { color: var(--bfk-color-burgundy-400); }
-.bfk-tag--ember { color: var(--bfk-accent-ember); }
+.bfk-tag--cherry { color: var(--bfk-accent-cherry); }
 .bfk-tag--neutral { color: var(--bfk-text-muted); }
 
 .bfk-tag--fill {
   color: var(--bfk-text-primary);
   border-color: transparent;
 }
-.bfk-tag--fill.bfk-tag--gold { background: var(--bfk-color-gold-600); color: var(--bfk-text-on-bone); }
+.bfk-tag--fill.bfk-tag--olive { background: var(--bfk-color-olive-400); color: var(--bfk-text-on-cream); }
 .bfk-tag--fill.bfk-tag--wine { background: var(--bfk-accent-wine); }
-.bfk-tag--fill.bfk-tag--ember { background: var(--bfk-accent-ember); }
+.bfk-tag--fill.bfk-tag--cherry { background: var(--bfk-accent-cherry); }
 .bfk-tag--fill.bfk-tag--neutral { background: var(--bfk-color-ink-500); }
