@@ -30,7 +30,7 @@ const Phrase = ({ children }: { children: string }) => (
 )
 
 const Mark = () => (
-  <span style={{ display: 'inline-block', width: 6, height: 6, background: 'var(--bfk-accent-gold)', transform: 'rotate(45deg)', marginInline: '2.5rem' }} />
+  <span style={{ display: 'inline-block', width: 6, height: 6, background: 'var(--bfk-accent-olive)', transform: 'rotate(45deg)', marginInline: '2.5rem' }} />
 )
 
 export const Ticker: Story = {

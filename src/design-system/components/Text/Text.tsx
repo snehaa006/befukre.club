@@ -4,7 +4,7 @@ import type { PolymorphicProps } from '../../utils/polymorphic.ts'
 import './Text.css'
 
 export type TextVariant =
-  /* Playfair, set tight and large. The club's shouting voice. */
+  /* Bebas Neue caps, set enormous. The club's shouting voice. */
   | 'display-xl'
   | 'display-lg'
   | 'display-md'
@@ -13,16 +13,16 @@ export type TextVariant =
   | 'title-lg'
   | 'title-md'
   | 'title-sm'
-  /* Cormorant, for the editorial opening line of a section. */
+  /* Imbue, for the editorial opening line of a section. */
   | 'lead'
-  /* Jost, the reading and UI voice. */
+  /* Instrument Sans, the reading and UI voice. */
   | 'body-lg'
   | 'body'
   | 'body-sm'
   | 'caption'
   /* Wide-tracked micro caps — corner labels, nav, overlines. */
   | 'eyebrow'
-  /* Mrs Saint Delafield. One word at a time. */
+  /* Pinyon Script. One word at a time. */
   | 'script'
 
 export type TextTone =
@@ -30,10 +30,10 @@ export type TextTone =
   | 'secondary'
   | 'muted'
   | 'faint'
-  | 'gold'
-  | 'ember'
+  | 'olive'
+  | 'cherry'
   | 'wine'
-  | 'onBone'
+  | 'onCream'
   | 'inherit'
 
 export interface TextOwnProps {

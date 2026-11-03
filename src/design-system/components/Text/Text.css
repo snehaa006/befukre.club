@@ -3,25 +3,24 @@
   color: inherit;
 }
 
-/* ── Display: Playfair, tight, big ──────────────────────────── */
+/* ── Display: Bebas Neue caps, tight, big ─────────────────── */
 .bfk-text--display-xl,
 .bfk-text--display-lg,
 .bfk-text--display-md,
 .bfk-text--display-sm {
   font-family: var(--bfk-font-display);
   font-weight: var(--bfk-font-weight-regular);
-  line-height: var(--bfk-leading-tight);
-  letter-spacing: var(--bfk-tracking-tight);
+  line-height: 0.9;
+  letter-spacing: var(--bfk-tracking-poster);
+  text-transform: uppercase;
   color: var(--bfk-text-primary);
 }
 
 .bfk-text--display-xl {
-  font-size: var(--bfk-font-size-7xl);
-  letter-spacing: var(--bfk-tracking-tighter);
+  font-size: var(--bfk-font-size-8xl);
 }
 .bfk-text--display-lg {
-  font-size: var(--bfk-font-size-6xl);
-  letter-spacing: var(--bfk-tracking-tighter);
+  font-size: var(--bfk-font-size-7xl);
 }
 .bfk-text--display-md {
   font-size: var(--bfk-font-size-5xl);
@@ -36,8 +35,9 @@
 .bfk-text--title-sm {
   font-family: var(--bfk-font-display);
   font-weight: var(--bfk-font-weight-regular);
-  line-height: var(--bfk-leading-snug);
-  letter-spacing: var(--bfk-tracking-tight);
+  line-height: 0.95;
+  letter-spacing: var(--bfk-tracking-normal);
+  text-transform: uppercase;
   color: var(--bfk-text-primary);
 }
 
@@ -65,7 +65,7 @@
 .bfk-text--body-sm,
 .bfk-text--caption {
   font-family: var(--bfk-font-sans);
-  font-weight: var(--bfk-font-weight-light);
+  font-weight: var(--bfk-font-weight-regular);
   line-height: var(--bfk-leading-relaxed);
   color: var(--bfk-text-secondary);
 }
@@ -104,7 +104,7 @@
   font-weight: var(--bfk-font-weight-regular);
   line-height: 0.9;
   letter-spacing: var(--bfk-tracking-normal);
-  color: var(--bfk-text-ember);
+  color: var(--bfk-text-cherry);
 }
 
 /* ── Tones ──────────────────────────────────────────────────── */
@@ -112,10 +112,10 @@
 .bfk-text--tone-secondary { color: var(--bfk-text-secondary); }
 .bfk-text--tone-muted { color: var(--bfk-text-muted); }
 .bfk-text--tone-faint { color: var(--bfk-text-faint); }
-.bfk-text--tone-gold { color: var(--bfk-text-gold); }
-.bfk-text--tone-ember { color: var(--bfk-text-ember); }
+.bfk-text--tone-olive { color: var(--bfk-text-olive); }
+.bfk-text--tone-cherry { color: var(--bfk-text-cherry); }
 .bfk-text--tone-wine { color: var(--bfk-color-burgundy-400); }
-.bfk-text--tone-onBone { color: var(--bfk-text-on-bone); }
+.bfk-text--tone-onCream { color: var(--bfk-text-on-cream); }
 
 /* ── Modifiers ──────────────────────────────────────────────── */
 .bfk-text--align-start { text-align: start; }

@@ -16,8 +16,8 @@
 }
 
 .bfk-eyebrow--muted { color: var(--bfk-text-muted); }
-.bfk-eyebrow--gold { color: var(--bfk-text-gold); }
-.bfk-eyebrow--ember { color: var(--bfk-text-ember); }
+.bfk-eyebrow--olive { color: var(--bfk-text-olive); }
+.bfk-eyebrow--cherry { color: var(--bfk-text-cherry); }
 .bfk-eyebrow--primary { color: var(--bfk-text-primary); }
 
 .bfk-eyebrow--rule-before::before,

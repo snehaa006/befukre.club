@@ -25,10 +25,10 @@
   color: var(--bfk-text-secondary);
 }
 
-.bfk-card--bone {
-  background: var(--bfk-bg-bone);
-  border: 1px solid var(--bfk-line-on-bone);
-  color: var(--bfk-text-on-bone);
+.bfk-card--cream {
+  background: var(--bfk-bg-paper);
+  border: 1px solid var(--bfk-line-on-cream);
+  color: var(--bfk-text-on-cream);
 }
 
 .bfk-card--pad-none { padding: 0; }

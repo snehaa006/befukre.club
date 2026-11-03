@@ -12,9 +12,10 @@ const preview: Preview = {
     },
     backgrounds: {
       options: {
-        noir: { name: 'Noir', value: '#070405' },
-        wine: { name: 'Wine', value: '#3D0C16' },
-        bone: { name: 'Bone', value: '#F6F0E7' },
+        noir: { name: 'Espresso', value: '#120907' },
+        wine: { name: 'Burgundy', value: '#551619' },
+        olive: { name: 'Olive', value: '#433D1F' },
+        cream: { name: 'Cream', value: '#F4EBDD' },
       },
     },
     a11y: { test: 'todo' },

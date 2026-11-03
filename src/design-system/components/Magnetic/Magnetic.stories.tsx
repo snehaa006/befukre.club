@@ -24,7 +24,7 @@ export const AroundAButton: Story = {
 }
 
 export const Strong: Story = {
-  args: { strength: 0.8, children: <Button variant="ember" size="lg">Pulls harder</Button> },
+  args: { strength: 0.8, children: <Button variant="cherry" size="lg">Pulls harder</Button> },
 }
 
 export const Subtle: Story = {

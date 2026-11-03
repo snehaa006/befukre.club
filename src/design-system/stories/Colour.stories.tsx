@@ -9,7 +9,7 @@ const meta: Meta = {
     docs: {
       description: {
         component:
-          'Black first, burgundy second. Ember and gold are accents — hairlines, numerals and a single lit edge, never fields of colour.',
+          'Three leathers — olive, burgundy, cream — from the owner’s swatch card, with espresso, cherry and chocolate from the sticker moodboard. Sections are colour-blocked in one leather at a time; cherry is the pop.',
       },
     },
   },
@@ -25,20 +25,23 @@ const ramp = (family: Record<string | number, string>, group: string) =>
 export const Palette: Story = {
   render: () => (
     <Sheet>
-      <Row label="Ink" hint="The page. Near-black with a red undertone so it never goes cold beside wine.">
+      <Row label="Ink" hint="Espresso darks. 600 is the moodboard espresso; 900 is the page floor.">
         <Grid>{ramp(color.ink, 'ink')}</Grid>
       </Row>
-      <Row label="Burgundy" hint="The house colour. 600 is the one to reach for.">
+      <Row label="Burgundy" hint="The house leather. 600 is the one to reach for.">
         <Grid>{ramp(color.burgundy, 'burgundy')}</Grid>
       </Row>
-      <Row label="Ember" hint="Accent only — the lit glass, one call to action per screen.">
-        <Grid>{ramp(color.ember, 'ember')}</Grid>
+      <Row label="Cherry" hint="The pop — stickers, prices, the cursor.">
+        <Grid>{ramp(color.cherry, 'cherry')}</Grid>
       </Row>
-      <Row label="Gold" hint="Hairlines, ornament and small caps.">
-        <Grid>{ramp(color.gold, 'gold')}</Grid>
+      <Row label="Olive" hint="Full olive fields at 600; 200 is the light accent for type on dark.">
+        <Grid>{ramp(color.olive, 'olive')}</Grid>
       </Row>
-      <Row label="Bone" hint="Type on dark, warm white through to ash.">
-        <Grid>{ramp(color.bone, 'bone')}</Grid>
+      <Row label="Cream" hint="Type on dark, warm white through to ash.">
+        <Grid>{ramp(color.cream, 'cream')}</Grid>
+      </Row>
+      <Row label="Chocolate" hint="Warm mid-tones and paper shadows.">
+        <Grid>{ramp(color.chocolate, 'chocolate')}</Grid>
       </Row>
     </Sheet>
   ),

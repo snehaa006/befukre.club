@@ -37,7 +37,7 @@
 .spec__code {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.75rem;
-  color: var(--bfk-text-gold);
+  color: var(--bfk-text-olive);
 }
 
 .spec__demo {

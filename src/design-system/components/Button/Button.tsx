@@ -3,7 +3,7 @@ import { cx } from '../../utils/cx.ts'
 import { Magnetic } from '../Magnetic/Magnetic.tsx'
 import './Button.css'
 
-export type ButtonVariant = 'solid' | 'ember' | 'outline' | 'ghost' | 'link'
+export type ButtonVariant = 'solid' | 'cherry' | 'outline' | 'ghost' | 'link'
 export type ButtonSize = 'sm' | 'md' | 'lg'
 
 interface ButtonBaseProps {
@@ -33,7 +33,7 @@ const Arrow = () => (
 )
 
 /**
- * The club's call to action. `solid` is the house burgundy; keep `ember`
+ * The club's call to action. `solid` is the house burgundy; keep `cherry`
  * for the single most important action on a screen.
  */
 export function Button({

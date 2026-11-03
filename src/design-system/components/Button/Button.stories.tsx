@@ -8,13 +8,13 @@ const meta: Meta<typeof Button> = {
     docs: {
       description: {
         component:
-          'The hover fill rises from the bottom edge. `solid` is the house burgundy; keep `ember` for the single most important action on a screen.',
+          'The hover fill rises from the bottom edge. `solid` is the house burgundy; keep `cherry` for the single most important action on a screen.',
       },
     },
   },
   args: { children: 'Reserve a table', variant: 'solid', size: 'md' },
   argTypes: {
-    variant: { control: 'inline-radio', options: ['solid', 'ember', 'outline', 'ghost', 'link'] },
+    variant: { control: 'inline-radio', options: ['solid', 'cherry', 'outline', 'ghost', 'link'] },
     size: { control: 'inline-radio', options: ['sm', 'md', 'lg'] },
   },
 }
@@ -23,8 +23,8 @@ type Story = StoryObj<typeof Button>
 
 export const Solid: Story = {}
 
-export const Ember: Story = {
-  args: { variant: 'ember', children: 'Hold me a seat' },
+export const Cherry: Story = {
+  args: { variant: 'cherry', children: 'Hold me a seat' },
 }
 
 export const Outline: Story = {
@@ -64,7 +64,7 @@ export const AllVariants: Story = {
   render: () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center' }}>
       <Button variant="solid">Solid</Button>
-      <Button variant="ember">Ember</Button>
+      <Button variant="cherry">Cherry</Button>
       <Button variant="outline">Outline</Button>
       <Button variant="ghost">Ghost</Button>
       <Button variant="link">Link</Button>

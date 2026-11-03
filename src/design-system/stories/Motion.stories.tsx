@@ -21,7 +21,7 @@ type Story = StoryObj
 const Puck = ({ seconds, easing }: { seconds: number; easing: string }) => (
   <div style={{ width: '100%', maxWidth: 420, height: 26, background: 'var(--bfk-bg-raised)', borderRadius: 999 }}>
     <motion.div
-      style={{ width: 26, height: 26, borderRadius: 999, background: 'var(--bfk-accent-ember)' }}
+      style={{ width: 26, height: 26, borderRadius: 999, background: 'var(--bfk-accent-cherry)' }}
       animate={{ x: [0, 394, 0] }}
       transition={{ duration: seconds * 2, ease: easing as never, repeat: Infinity, repeatDelay: 0.4 }}
     />

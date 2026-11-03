@@ -4,9 +4,9 @@ import { Tag } from './Tag.tsx'
 const meta: Meta<typeof Tag> = {
   title: 'Components/Tag',
   component: Tag,
-  args: { children: '21:30', tone: 'gold', fill: false },
+  args: { children: '21:30', tone: 'olive', fill: false },
   argTypes: {
-    tone: { control: 'inline-radio', options: ['gold', 'wine', 'ember', 'neutral'] },
+    tone: { control: 'inline-radio', options: ['olive', 'wine', 'cherry', 'neutral'] },
   },
 }
 export default meta
@@ -19,13 +19,13 @@ export const All: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-      <Tag tone="gold">Gold</Tag>
+      <Tag tone="olive">Olive</Tag>
       <Tag tone="wine">Wine</Tag>
-      <Tag tone="ember">Ember</Tag>
+      <Tag tone="cherry">Cherry</Tag>
       <Tag tone="neutral">Neutral</Tag>
-      <Tag tone="gold" fill>Gold filled</Tag>
+      <Tag tone="olive" fill>Olive filled</Tag>
       <Tag tone="wine" fill>Wine filled</Tag>
-      <Tag tone="ember" fill>Ember filled</Tag>
+      <Tag tone="cherry" fill>Cherry filled</Tag>
     </div>
   ),
 }

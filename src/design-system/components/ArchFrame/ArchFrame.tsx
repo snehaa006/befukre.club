@@ -4,7 +4,7 @@ import './ArchFrame.css'
 
 export interface ArchFrameProps {
   children: ReactNode
-  tone?: 'wine' | 'ink' | 'bone'
+  tone?: 'wine' | 'ink' | 'cream'
   /** Gilt rule held inside the edge. */
   bordered?: boolean
   /** Narrower shoulders — reads as a keyhole rather than a doorway. */

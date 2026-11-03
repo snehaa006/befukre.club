@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { Plate } from '../Plate/Plate.tsx'
 import { Text } from '../Text/Text.tsx'
 import { Reveal } from './Reveal.tsx'
 import { Stagger, StaggerItem } from './Stagger.tsx'
@@ -70,7 +69,13 @@ export const Wipe: Story = {
   parameters: { docs: { description: { story: 'Curtain lift — the slowest of the set, meant for images.' } } },
   args: {
     effect: 'wipe',
-    children: <div style={{ width: '18rem' }}><Plate subject="coupe" ratio="3/4" frame="hairline" /></div>,
+    children: (
+      <img
+        src="/photos/smoke-coupe.webp"
+        alt="A smoking coupe on black velvet"
+        style={{ width: '18rem', aspectRatio: '3/4', objectFit: 'cover', display: 'block' }}
+      />
+    ),
   },
 }
 

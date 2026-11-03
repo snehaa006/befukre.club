@@ -1,0 +1,121 @@
+.manifesto {
+  position: relative;
+  padding: clamp(5rem, 12vh, 9rem) var(--bfk-layout-gutter) clamp(4rem, 9vh, 7rem);
+  overflow: clip;
+  color: var(--bfk-color-burgundy-700);
+}
+
+.manifesto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(120% 80% at 50% 0%, rgba(244, 235, 221, 0.35), transparent 60%);
+}
+
+.manifesto__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--bfk-space-6);
+  margin-block-end: var(--bfk-space-10);
+  color: var(--bfk-color-burgundy-800);
+}
+
+.manifesto__script {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  color: var(--bfk-color-cherry-400);
+  transform: rotate(-4deg);
+}
+
+.manifesto__text {
+  max-width: 17ch;
+  margin: 0;
+  font-size: clamp(3rem, 8.4vw, 9.2rem);
+  line-height: 0.9;
+  color: var(--bfk-color-burgundy-800);
+}
+
+.manifesto__word {
+  display: inline-block;
+  margin-inline-end: 0.22em;
+}
+
+.manifesto__img {
+  display: inline-block;
+  height: 0.78em;
+  margin-inline-end: 0.22em;
+  vertical-align: -0.02em;
+  overflow: hidden;
+  border-radius: 999px;
+  box-shadow: 0 0 0 0.06em #faf5ec, 0 0.08em 0.2em rgba(18, 9, 7, 0.3);
+}
+
+.manifesto__img img {
+  display: block;
+  width: 1.9em;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manifesto__img.is-cutout {
+  height: 0.95em;
+  vertical-align: -0.12em;
+  overflow: visible;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.manifesto__img.is-cutout img {
+  width: 1.1em;
+  object-fit: contain;
+  filter: drop-shadow(0 0.04em 0.06em rgba(18, 9, 7, 0.35));
+}
+
+/* ── Stats ──────────────────────────────────────────────────── */
+.manifesto__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--bfk-space-8);
+  margin: clamp(4rem, 10vh, 7rem) 0 0;
+  padding-block-start: var(--bfk-space-8);
+  border-top: 1.5px solid rgba(50, 11, 17, 0.25);
+}
+
+.manifesto__stat {
+  display: grid;
+  gap: var(--bfk-space-2);
+}
+
+.manifesto__stat dt {
+  order: 2;
+  font-size: var(--bfk-font-size-2xs);
+  font-weight: var(--bfk-font-weight-medium);
+  letter-spacing: var(--bfk-tracking-wide);
+  text-transform: uppercase;
+  color: var(--bfk-color-burgundy-600);
+}
+
+.manifesto__stat dd {
+  margin: 0;
+  font-family: var(--bfk-font-serif);
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 400;
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+  color: var(--bfk-color-cherry-500);
+}
+
+/* ── Stickers ───────────────────────────────────────────────── */
+.manifesto__s {
+  position: absolute !important;
+}
+.manifesto__s--coupe { right: 6%; top: 24%; }
+.manifesto__s--label { right: 14%; top: 14%; }
+
+@media (max-width: 759px) {
+  .manifesto__s--coupe { right: 4%; top: auto; bottom: 20%; }
+  .manifesto__s--label { right: 6%; top: 9%; }
+  .manifesto__script { display: none; }
+}

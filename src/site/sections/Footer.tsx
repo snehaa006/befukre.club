@@ -1,90 +1,86 @@
-import { Logo } from '@ds/components/Logo/index.ts'
-import { Marquee } from '@ds/components/Marquee/index.ts'
-import { Ornament } from '@ds/components/Ornament/index.ts'
-import { Reveal } from '@ds/components/Reveal/index.ts'
-import { Text } from '@ds/components/Text/index.ts'
-import { club, nav } from '../data/content.ts'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
+import { Sticker } from '@ds/components/Sticker/index.ts'
+import { useFinePointer } from '@ds/hooks/useFinePointer.ts'
+import { club, footer } from '../data/content.ts'
 import './Footer.css'
 
-const year = new Date().getFullYear()
-
+/**
+ * Olive leather, the logo set as wide as the page, and a handful of stickers
+ * that drop out of the sky when you arrive — then stay where you throw them.
+ */
 export function Footer() {
+  const fine = useFinePointer()
+  const ref = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end end'] })
+  const logoY = useTransform(scrollYProgress, [0, 1], ['40%', '0%'])
+  const logoScale = useTransform(scrollYProgress, [0, 1], [0.86, 1])
+  // The drops start far above their box, so trigger them off the footer itself.
+  const raining = useInView(ref, { once: true, amount: 0.2 })
+
   return (
-    <footer className="footer">
-      <div className="footer__band">
-        <Marquee speed={52} direction="right" separator={<span className="footer__mark">✦</span>}>
-          <span className="footer__bandWord">Carefree since 2026</span>
-          <span className="footer__bandWord">Leave your worries at the door</span>
-        </Marquee>
+    <footer className="footer leather leather--olive" ref={ref}>
+      <div className="footer__rain" aria-hidden="true">
+        {footer.rain.map((s, i) => (
+          <motion.div
+            key={s.src}
+            className="footer__drop"
+            style={{ left: `${s.x}%` }}
+            initial={{ y: '-70vh', rotate: s.r * 4, opacity: 0 }}
+            animate={raining ? { y: 0, rotate: s.r, opacity: 1 } : undefined}
+            transition={{ type: 'spring', stiffness: 90, damping: 11, mass: 1.1, delay: i * 0.09 }}
+          >
+            <Sticker src={s.src} width={s.width} slap={false} draggable={fine} bounds={ref} />
+          </motion.div>
+        ))}
       </div>
 
-      <div className="bfk-container footer__inner">
-        <Reveal effect="rise" className="footer__brand">
-          <Logo variant="lockup" size="lg" tone="bone" />
-        </Reveal>
-
-        <Ornament variant="diamond" className="footer__rule" />
-
-        <div className="footer__columns">
-          <section className="footer__column">
-            <Text variant="eyebrow" tone="gold" as="h2">
-              Find us
-            </Text>
-            <address className="footer__address">
-              {club.address.map((line) => (
-                <span key={line}>{line}</span>
-              ))}
-            </address>
-            <a className="footer__link" href={`mailto:${club.email}`}>
-              {club.email}
-            </a>
-            <a className="footer__link" href={`tel:${club.phone.replace(/\s/g, '')}`}>
-              {club.phone}
-            </a>
-          </section>
-
-          <section className="footer__column">
-            <Text variant="eyebrow" tone="gold" as="h2">
-              Hours
-            </Text>
-            {club.hours.map((slot) => (
-              <p className="footer__hours" key={slot.days}>
-                <span>{slot.days}</span>
-                <span>{slot.time}</span>
-              </p>
+      <div className="footer__cols">
+        <div className="footer__col">
+          <span className="bracket"><span className="bracket__n">[V]</span> Visit</span>
+          <p>
+            {club.address[0]}
+            <br />
+            {club.address[1]}
+          </p>
+        </div>
+        <div className="footer__col">
+          <span className="bracket"><span className="bracket__n">[H]</span> Hours</span>
+          <p>
+            {club.hours.map((h) => (
+              <span key={h.days}>
+                {h.days} — {h.time}
+                <br />
+              </span>
             ))}
-          </section>
-
-          <section className="footer__column">
-            <Text variant="eyebrow" tone="gold" as="h2">
-              Elsewhere
-            </Text>
-            <a
-              className="footer__link footer__link--lead"
-              href={club.instagramUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+          </p>
+        </div>
+        <div className="footer__col">
+          <span className="bracket"><span className="bracket__n">[W]</span> Write</span>
+          <p>
+            <a href={`mailto:${club.email}`}>{club.email}</a>
+            <br />
+            <a href={`tel:${club.phone.replace(/\s/g, '')}`}>{club.phone}</a>
+          </p>
+        </div>
+        <div className="footer__col">
+          <span className="bracket"><span className="bracket__n">[F]</span> Follow</span>
+          <p>
+            <a href={club.instagramUrl} target="_blank" rel="noreferrer noopener">
               @{club.instagram}
             </a>
-            <nav className="footer__nav" aria-label="Footer">
-              {nav.map((item) => (
-                <a className="footer__link" href={item.href} key={item.href}>
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-          </section>
+          </p>
         </div>
+      </div>
 
-        <div className="footer__base">
-          <Text variant="caption" tone="faint">
-            © {year} {club.name} — {club.tagline}
-          </Text>
-          <Text variant="caption" tone="faint">
-            Please drink responsibly. 21+.
-          </Text>
-        </div>
+      <motion.div className="footer__logo" style={{ y: logoY, scale: logoScale }}>
+        <img src="/brand/logo-cream.webp" alt="BEFUKRE Club" width="1351" height="591" loading="lazy" />
+      </motion.div>
+
+      <div className="footer__base">
+        <span>© 2026 BEFUKRE Club. {footer.line}</span>
+        <span>{footer.legal}</span>
+        <a href="#top">Back to the door ↑</a>
       </div>
     </footer>
   )

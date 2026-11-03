@@ -25,7 +25,7 @@ const meta: Meta<typeof Text> = {
     },
     tone: {
       control: 'select',
-      options: ['primary', 'secondary', 'muted', 'faint', 'gold', 'ember', 'wine', 'onBone', 'inherit'],
+      options: ['primary', 'secondary', 'muted', 'faint', 'olive', 'cherry', 'wine', 'onCream', 'inherit'],
     },
     align: { control: 'inline-radio', options: ['start', 'center', 'end'] },
   },
@@ -44,7 +44,7 @@ export const Lead: Story = {
 }
 
 export const Eyebrow: Story = {
-  args: { variant: 'eyebrow', children: 'Est. 2026 — after dark', tone: 'gold' },
+  args: { variant: 'eyebrow', children: 'Est. 2026 — after dark', tone: 'olive' },
 }
 
 export const Script: Story = {
@@ -66,7 +66,7 @@ export const Tones: Story = {
   parameters: { controls: { disable: true } },
   render: () => (
     <div style={{ display: 'grid', gap: '0.5rem' }}>
-      {(['primary', 'secondary', 'muted', 'faint', 'gold', 'ember', 'wine'] as const).map((tone) => (
+      {(['primary', 'secondary', 'muted', 'faint', 'olive', 'cherry', 'wine'] as const).map((tone) => (
         <Text key={tone} variant="title-sm" tone={tone}>
           {tone}
         </Text>

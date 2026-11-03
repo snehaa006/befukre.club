@@ -34,7 +34,7 @@ body {
 }
 
 :focus-visible {
-  outline: 1px solid var(--bfk-accent-gold);
+  outline: 1px solid var(--bfk-accent-olive);
   outline-offset: 3px;
   border-radius: var(--bfk-radius-xs);
 }

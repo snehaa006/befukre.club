@@ -12,10 +12,10 @@ const meta: Meta<typeof Ornament> = {
       },
     },
   },
-  args: { variant: 'diamond', tone: 'gold' },
+  args: { variant: 'diamond', tone: 'olive' },
   argTypes: {
     variant: { control: 'inline-radio', options: ['rule', 'diamond', 'crest', 'dots'] },
-    tone: { control: 'inline-radio', options: ['gold', 'subtle', 'ember'] },
+    tone: { control: 'inline-radio', options: ['olive', 'subtle', 'cherry'] },
   },
   decorators: [(Story) => <div style={{ width: 'min(40rem, 100%)' }}><Story /></div>],
 }

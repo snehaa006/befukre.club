@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { cx } from '../../utils/cx.ts'
 import './Card.css'
 
-export type CardTone = 'ink' | 'wine' | 'outline' | 'bone'
+export type CardTone = 'ink' | 'wine' | 'outline' | 'cream'
 
 export interface CardProps {
   children: ReactNode

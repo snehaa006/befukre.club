@@ -12,8 +12,8 @@
 .bfk-numeral--xl { font-size: var(--bfk-font-size-7xl); }
 
 .bfk-numeral--primary { color: var(--bfk-text-primary); }
-.bfk-numeral--gold { color: var(--bfk-accent-gold); }
-.bfk-numeral--ember { color: var(--bfk-accent-ember); }
+.bfk-numeral--olive { color: var(--bfk-accent-olive); }
+.bfk-numeral--cherry { color: var(--bfk-accent-cherry); }
 
 /* Hollow figures, so an image can show through behind them. */
 .bfk-numeral--outline {

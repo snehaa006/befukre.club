@@ -4,52 +4,61 @@
  * CSS custom properties in `tokens.css` are GENERATED from this file.
  * Run `npm run tokens` after editing. Never hand-edit tokens.css.
  *
- * Palette notes: the club reads as black first, burgundy second. Ember and
- * gold are accents measured in teaspoons — hairlines, numerals, a single
- * glowing edge — never fields of colour.
+ * Palette notes: three leathers — olive, burgundy, cream — lifted straight
+ * from the owner's swatch card, plus espresso, cherry and chocolate from the
+ * sticker moodboard. Sections are colour-blocked in full fields of one leather
+ * at a time; cherry is the pop, used on stickers, prices and the cursor.
  */
 
-/** Raw palette. Numbered 900 (deepest) → 300 (lightest). */
+/** Raw palette. Lower numbers are lighter. Values marked (ref) were sampled. */
 export const color = {
-  /** Near-black with a red undertone, so black never goes cold next to wine. */
+  /** Espresso darks. 600 is the moodboard espresso; 900 is the page floor. */
   ink: {
-    900: '#070405',
-    800: '#0B0607',
-    700: '#120A0C',
-    600: '#1A0F12',
-    500: '#241619',
+    900: '#120907',
+    800: '#1A0E0B',
+    700: '#231410',
+    600: '#2E1A15', // (ref) espresso
+    500: '#3B241D',
   },
-  /** The house colour. 600 is "the" burgundy. */
+  /** The house leather. 600 is "the" burgundy. */
   burgundy: {
-    900: '#2A0810',
-    800: '#3D0C16',
-    700: '#51121E',
-    600: '#6B1623',
-    500: '#8A1C2B',
-    400: '#A82836',
+    900: '#22060A',
+    800: '#320B11', // (ref) moodboard burgundy
+    700: '#490D11', // (ref) leather, shadow side
+    600: '#551619', // (ref) leather, lit side
+    500: '#6E1D21',
+    400: '#8A2A2C',
   },
-  /** Vermillion from the lit-glass references. Accent only. */
-  ember: {
-    600: '#A6331A',
-    500: '#C8441F',
-    400: '#DC5C30',
-    300: '#E8805A',
+  /** Glacé cherry. The pop colour — stickers, prices, the cursor. */
+  cherry: {
+    600: '#5A0701', // (ref) moodboard cherry
+    500: '#8E0E0B',
+    400: '#B5161A',
+    300: '#D8414A',
   },
-  /** Gilt for hairlines, ornament and small caps. */
-  gold: {
-    600: '#8E7340',
-    500: '#B2924F',
-    400: '#C9A66B',
-    300: '#E0C894',
+  /** Olive leather. 600 is the swatch; 200 is the light accent for type on dark. */
+  olive: {
+    700: '#2E2A14',
+    600: '#433D1F', // (ref) olive leather
+    500: '#5C5530',
+    400: '#7F7746',
+    300: '#A69D63',
+    200: '#C9C08A',
+    100: '#E2DBB0',
   },
-  /** Warm paper white → muted ash, for type on dark. */
-  bone: {
-    100: '#F6F0E7',
-    200: '#E8DFD2',
-    300: '#CFC2B2',
-    400: '#9C8B84',
-    500: '#6F605C',
-    600: '#4A3E3C',
+  /** Cream leather → lace white, and down to warm ash for muted type. */
+  cream: {
+    100: '#F4EBDD', // lace
+    200: '#E6D8C3',
+    300: '#D2BEA5', // (ref) cream leather
+    400: '#A8957E',
+    500: '#7A6A5A',
+    600: '#4E4038',
+  },
+  /** Milk chocolate, for warm mid-tones and paper shadows. */
+  chocolate: {
+    500: '#5F3A2F', // (ref) moodboard chocolate
+    400: '#7A4D3E',
   },
 } as const
 
@@ -57,47 +66,56 @@ export const color = {
 export const bg = {
   canvas: color.ink[900],
   raised: color.ink[700],
-  sunken: '#040203',
-  wine: color.burgundy[800],
-  wineDeep: color.burgundy[900],
-  wineLit: color.burgundy[600],
-  bone: color.bone[100],
-  scrim: 'rgba(7, 4, 5, 0.72)',
+  sunken: '#0B0504',
+  espresso: color.ink[600],
+  wine: color.burgundy[600],
+  wineDeep: color.burgundy[800],
+  wineLit: color.burgundy[500],
+  olive: color.olive[600],
+  oliveDeep: color.olive[700],
+  cream: color.cream[300],
+  paper: color.cream[100],
+  cherry: color.cherry[500],
+  scrim: 'rgba(18, 9, 7, 0.72)',
 } as const
 
 export const text = {
-  primary: color.bone[100],
-  secondary: color.bone[300],
-  muted: color.bone[400],
-  faint: color.bone[500],
-  onWine: color.bone[100],
-  onBone: color.ink[900],
-  gold: color.gold[400],
-  ember: color.ember[400],
+  primary: color.cream[100],
+  secondary: color.cream[200],
+  muted: color.cream[400],
+  faint: color.cream[500],
+  onWine: color.cream[100],
+  onCream: color.ink[900],
+  onPaper: color.burgundy[800],
+  olive: color.olive[200],
+  cherry: color.cherry[300],
 } as const
 
 export const line = {
-  hairline: 'rgba(201, 166, 107, 0.26)',
-  hairlineStrong: 'rgba(201, 166, 107, 0.52)',
-  subtle: 'rgba(246, 240, 231, 0.12)',
-  onBone: 'rgba(42, 8, 16, 0.18)',
+  hairline: 'rgba(226, 219, 176, 0.24)',
+  hairlineStrong: 'rgba(226, 219, 176, 0.5)',
+  subtle: 'rgba(244, 235, 221, 0.14)',
+  onCream: 'rgba(50, 11, 17, 0.22)',
 } as const
 
 export const accent = {
   wine: color.burgundy[600],
-  ember: color.ember[500],
-  gold: color.gold[400],
+  cherry: color.cherry[400],
+  olive: color.olive[200],
+  cream: color.cream[100],
 } as const
 
 /** Type families. Loaded in `styles/fonts.css`. */
 export const font = {
-  display: '"Playfair Display", "Times New Roman", Times, serif',
-  serif: '"Cormorant Garamond", Georgia, "Times New Roman", serif',
-  script: '"Mrs Saint Delafield", "Snell Roundhand", cursive',
-  sans: '"Jost", "Helvetica Neue", Helvetica, Arial, sans-serif',
+  /** Condensed caps for the loud lines — set enormous. */
+  display: '"Bebas Neue", "Oswald", Impact, "Arial Narrow", sans-serif',
+  /** Condensed didone, the logo's cousin. Numerals, dates, prices. */
+  serif: '"Imbue", "Bodoni 72", Didot, "Times New Roman", serif',
+  /** The "Club" hand. One or two words at a time. */
+  script: '"Pinyon Script", "Snell Roundhand", cursive',
+  sans: '"Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
 } as const
 
-/** Fluid where it earns it; fixed for small type that must stay legible. */
 export const fontSize = {
   '3xs': '0.6875rem',
   '2xs': '0.75rem',
@@ -112,6 +130,9 @@ export const fontSize = {
   '5xl': 'clamp(3rem, 2rem + 5vw, 6rem)',
   '6xl': 'clamp(3.75rem, 2rem + 8.5vw, 9rem)',
   '7xl': 'clamp(4.5rem, 1.5rem + 13vw, 14rem)',
+  /** Poster scale — a word that fills the width. */
+  '8xl': 'clamp(5.5rem, 1rem + 19vw, 22rem)',
+  '9xl': 'clamp(7rem, 26vw, 30rem)',
 } as const
 
 export const fontWeight = {
@@ -125,6 +146,8 @@ export const fontWeight = {
 /** Wide tracking is a signature of the references — use `widest` on micro labels. */
 export const tracking = {
   tighter: '-0.04em',
+  /** Bebas sits tight already; this is for poster lines only. */
+  poster: '-0.01em',
   tight: '-0.02em',
   normal: '0em',
   wide: '0.06em',
@@ -133,6 +156,7 @@ export const tracking = {
 } as const
 
 export const leading = {
+  crush: '0.82',
   none: '1',
   tight: '1.06',
   snug: '1.2',
@@ -171,19 +195,25 @@ export const radius = {
   pill: '999px',
   /** Doorway silhouette from the arch references. */
   arch: '50% 50% 4px 4px / 42% 42% 4px 4px',
+  /** Rounded die-cut corner on photo stickers. */
+  sticker: '14px',
 } as const
 
 export const shadow = {
   1: '0 2px 12px rgba(0, 0, 0, 0.4)',
   2: '0 12px 40px rgba(0, 0, 0, 0.5)',
   3: '0 32px 90px rgba(0, 0, 0, 0.62)',
+  /** Paper sticker resting on a surface. Use as `filter: drop-shadow()` on cutouts. */
+  sticker: '0 1px 1px rgba(18, 9, 7, 0.25), 0 10px 18px rgba(18, 9, 7, 0.35)',
+  /** Same sticker, lifted under the finger. */
+  stickerLift: '0 4px 6px rgba(18, 9, 7, 0.2), 0 34px 44px rgba(18, 9, 7, 0.45)',
 } as const
 
 export const glow = {
-  ember: '0 0 70px rgba(200, 68, 31, 0.3)',
-  emberTight: '0 0 26px rgba(200, 68, 31, 0.45)',
-  wine: '0 0 90px rgba(107, 22, 35, 0.55)',
-  gold: '0 0 28px rgba(201, 166, 107, 0.32)',
+  cherry: '0 0 70px rgba(181, 22, 26, 0.35)',
+  cherryTight: '0 0 26px rgba(181, 22, 26, 0.5)',
+  wine: '0 0 90px rgba(85, 22, 25, 0.6)',
+  olive: '0 0 28px rgba(201, 192, 138, 0.3)',
 } as const
 
 /** Milliseconds. Generator appends the unit. */

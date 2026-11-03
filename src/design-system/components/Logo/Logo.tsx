@@ -4,7 +4,7 @@ import './Logo.css'
 export interface LogoProps {
   variant?: 'mark' | 'wordmark' | 'lockup'
   size?: 'sm' | 'md' | 'lg'
-  tone?: 'bone' | 'gold' | 'ink'
+  tone?: 'cream' | 'olive' | 'ink'
   /** Sub-line under the wordmark. */
   tagline?: string
   className?: string
@@ -26,7 +26,7 @@ const Mark = () => (
 export function Logo({
   variant = 'lockup',
   size = 'md',
-  tone = 'bone',
+  tone = 'cream',
   tagline = 'cocktail club',
   className,
 }: LogoProps) {

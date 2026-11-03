@@ -37,8 +37,8 @@
 
 .bfk-field__control:focus {
   outline: none;
-  border-color: var(--bfk-accent-gold);
-  box-shadow: 0 1px 0 0 var(--bfk-accent-gold);
+  border-color: var(--bfk-accent-olive);
+  box-shadow: 0 1px 0 0 var(--bfk-accent-olive);
 }
 
 .bfk-field__control--area {
@@ -83,9 +83,9 @@
 }
 
 .bfk-field--invalid .bfk-field__control {
-  border-color: var(--bfk-color-ember-400);
+  border-color: var(--bfk-color-cherry-400);
 }
 
 .bfk-field--invalid .bfk-field__message {
-  color: var(--bfk-color-ember-300);
+  color: var(--bfk-color-cherry-300);
 }

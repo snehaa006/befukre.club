@@ -3,6 +3,12 @@ import Lenis from 'lenis'
 import { usePrefersReducedMotion } from './usePrefersReducedMotion.ts'
 
 /**
+ * The live Lenis instance, for code that must pause scrolling (a preloader,
+ * a modal). Null when smooth scroll is off.
+ */
+export const lenisRef: { current: Lenis | null } = { current: null }
+
+/**
  * Smooth inertial scrolling for the whole document.
  * Skipped entirely when the visitor asks for reduced motion.
  */
@@ -18,6 +24,9 @@ export function useLenis(enabled = true): void {
       wheelMultiplier: 0.9,
       touchMultiplier: 1.6,
     })
+    lenisRef.current = lenis
+    // A preloader may already hold the page; start paused if so.
+    if (document.documentElement.classList.contains('is-loading')) lenis.stop()
 
     let frame = 0
     const raf = (time: number) => {
@@ -43,6 +52,7 @@ export function useLenis(enabled = true): void {
       cancelAnimationFrame(frame)
       document.removeEventListener('click', onAnchorClick)
       lenis.destroy()
+      lenisRef.current = null
     }
   }, [enabled, reduced])
 }

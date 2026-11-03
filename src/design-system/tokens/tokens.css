@@ -6,68 +6,80 @@
 
 :root {
   /* color */
-  --bfk-color-ink-500: #241619;
-  --bfk-color-ink-600: #1A0F12;
-  --bfk-color-ink-700: #120A0C;
-  --bfk-color-ink-800: #0B0607;
-  --bfk-color-ink-900: #070405;
-  --bfk-color-burgundy-400: #A82836;
-  --bfk-color-burgundy-500: #8A1C2B;
-  --bfk-color-burgundy-600: #6B1623;
-  --bfk-color-burgundy-700: #51121E;
-  --bfk-color-burgundy-800: #3D0C16;
-  --bfk-color-burgundy-900: #2A0810;
-  --bfk-color-ember-300: #E8805A;
-  --bfk-color-ember-400: #DC5C30;
-  --bfk-color-ember-500: #C8441F;
-  --bfk-color-ember-600: #A6331A;
-  --bfk-color-gold-300: #E0C894;
-  --bfk-color-gold-400: #C9A66B;
-  --bfk-color-gold-500: #B2924F;
-  --bfk-color-gold-600: #8E7340;
-  --bfk-color-bone-100: #F6F0E7;
-  --bfk-color-bone-200: #E8DFD2;
-  --bfk-color-bone-300: #CFC2B2;
-  --bfk-color-bone-400: #9C8B84;
-  --bfk-color-bone-500: #6F605C;
-  --bfk-color-bone-600: #4A3E3C;
+  --bfk-color-ink-500: #3B241D;
+  --bfk-color-ink-600: #2E1A15;
+  --bfk-color-ink-700: #231410;
+  --bfk-color-ink-800: #1A0E0B;
+  --bfk-color-ink-900: #120907;
+  --bfk-color-burgundy-400: #8A2A2C;
+  --bfk-color-burgundy-500: #6E1D21;
+  --bfk-color-burgundy-600: #551619;
+  --bfk-color-burgundy-700: #490D11;
+  --bfk-color-burgundy-800: #320B11;
+  --bfk-color-burgundy-900: #22060A;
+  --bfk-color-cherry-300: #D8414A;
+  --bfk-color-cherry-400: #B5161A;
+  --bfk-color-cherry-500: #8E0E0B;
+  --bfk-color-cherry-600: #5A0701;
+  --bfk-color-olive-100: #E2DBB0;
+  --bfk-color-olive-200: #C9C08A;
+  --bfk-color-olive-300: #A69D63;
+  --bfk-color-olive-400: #7F7746;
+  --bfk-color-olive-500: #5C5530;
+  --bfk-color-olive-600: #433D1F;
+  --bfk-color-olive-700: #2E2A14;
+  --bfk-color-cream-100: #F4EBDD;
+  --bfk-color-cream-200: #E6D8C3;
+  --bfk-color-cream-300: #D2BEA5;
+  --bfk-color-cream-400: #A8957E;
+  --bfk-color-cream-500: #7A6A5A;
+  --bfk-color-cream-600: #4E4038;
+  --bfk-color-chocolate-400: #7A4D3E;
+  --bfk-color-chocolate-500: #5F3A2F;
 
   /* bg */
-  --bfk-bg-canvas: #070405;
-  --bfk-bg-raised: #120A0C;
-  --bfk-bg-sunken: #040203;
-  --bfk-bg-wine: #3D0C16;
-  --bfk-bg-wine-deep: #2A0810;
-  --bfk-bg-wine-lit: #6B1623;
-  --bfk-bg-bone: #F6F0E7;
-  --bfk-bg-scrim: rgba(7, 4, 5, 0.72);
+  --bfk-bg-canvas: #120907;
+  --bfk-bg-raised: #231410;
+  --bfk-bg-sunken: #0B0504;
+  --bfk-bg-espresso: #2E1A15;
+  --bfk-bg-wine: #551619;
+  --bfk-bg-wine-deep: #320B11;
+  --bfk-bg-wine-lit: #6E1D21;
+  --bfk-bg-olive: #433D1F;
+  --bfk-bg-olive-deep: #2E2A14;
+  --bfk-bg-cream: #D2BEA5;
+  --bfk-bg-paper: #F4EBDD;
+  --bfk-bg-cherry: #8E0E0B;
+  --bfk-bg-scrim: rgba(18, 9, 7, 0.72);
 
   /* text */
-  --bfk-text-primary: #F6F0E7;
-  --bfk-text-secondary: #CFC2B2;
-  --bfk-text-muted: #9C8B84;
-  --bfk-text-faint: #6F605C;
-  --bfk-text-on-wine: #F6F0E7;
-  --bfk-text-on-bone: #070405;
-  --bfk-text-gold: #C9A66B;
-  --bfk-text-ember: #DC5C30;
+  --bfk-text-primary: #F4EBDD;
+  --bfk-text-secondary: #E6D8C3;
+  --bfk-text-muted: #A8957E;
+  --bfk-text-faint: #7A6A5A;
+  --bfk-text-on-wine: #F4EBDD;
+  --bfk-text-on-cream: #120907;
+  --bfk-text-on-paper: #320B11;
+  --bfk-text-olive: #C9C08A;
+  --bfk-text-cherry: #D8414A;
 
   /* line */
-  --bfk-line-hairline: rgba(201, 166, 107, 0.26);
-  --bfk-line-hairline-strong: rgba(201, 166, 107, 0.52);
-  --bfk-line-subtle: rgba(246, 240, 231, 0.12);
-  --bfk-line-on-bone: rgba(42, 8, 16, 0.18);
+  --bfk-line-hairline: rgba(226, 219, 176, 0.24);
+  --bfk-line-hairline-strong: rgba(226, 219, 176, 0.5);
+  --bfk-line-subtle: rgba(244, 235, 221, 0.14);
+  --bfk-line-on-cream: rgba(50, 11, 17, 0.22);
 
   /* accent */
-  --bfk-accent-wine: #6B1623;
-  --bfk-accent-ember: #C8441F;
-  --bfk-accent-gold: #C9A66B;
+  --bfk-accent-wine: #551619;
+  --bfk-accent-cherry: #B5161A;
+  --bfk-accent-olive: #C9C08A;
+  --bfk-accent-cream: #F4EBDD;
 
   /* font */
-  --bfk-font-display: "Playfair Display", "Times New Roman", Times, serif;
-  --bfk-font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --bfk-font-script: "Mrs Saint Delafield", "Snell Roundhand", cursive;
-  --bfk-font-sans: "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bfk-font-display: "Bebas Neue", "Oswald", Impact, "Arial Narrow", sans-serif;
+  --bfk-font-serif: "Imbue", "Bodoni 72", Didot, "Times New Roman", serif;
+  --bfk-font-script: "Pinyon Script", "Snell Roundhand", cursive;
+  --bfk-font-sans: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   /* fontSize */
   --bfk-font-size-3xs: 0.6875rem;
@@ -83,6 +95,8 @@
   --bfk-font-size-5xl: clamp(3rem, 2rem + 5vw, 6rem);
   --bfk-font-size-6xl: clamp(3.75rem, 2rem + 8.5vw, 9rem);
   --bfk-font-size-7xl: clamp(4.5rem, 1.5rem + 13vw, 14rem);
+  --bfk-font-size-8xl: clamp(5.5rem, 1rem + 19vw, 22rem);
+  --bfk-font-size-9xl: clamp(7rem, 26vw, 30rem);
 
   /* fontWeight */
   --bfk-font-weight-light: 300;
@@ -93,6 +107,7 @@
 
   /* tracking */
   --bfk-tracking-tighter: -0.04em;
+  --bfk-tracking-poster: -0.01em;
   --bfk-tracking-tight: -0.02em;
   --bfk-tracking-normal: 0em;
   --bfk-tracking-wide: 0.06em;
@@ -100,6 +115,7 @@
   --bfk-tracking-widest: 0.3em;
 
   /* leading */
+  --bfk-leading-crush: 0.82;
   --bfk-leading-none: 1;
   --bfk-leading-tight: 1.06;
   --bfk-leading-snug: 1.2;
@@ -134,17 +150,20 @@
   --bfk-radius-xl: 28px;
   --bfk-radius-pill: 999px;
   --bfk-radius-arch: 50% 50% 4px 4px / 42% 42% 4px 4px;
+  --bfk-radius-sticker: 14px;
 
   /* shadow */
   --bfk-shadow-1: 0 2px 12px rgba(0, 0, 0, 0.4);
   --bfk-shadow-2: 0 12px 40px rgba(0, 0, 0, 0.5);
   --bfk-shadow-3: 0 32px 90px rgba(0, 0, 0, 0.62);
+  --bfk-shadow-sticker: 0 1px 1px rgba(18, 9, 7, 0.25), 0 10px 18px rgba(18, 9, 7, 0.35);
+  --bfk-shadow-sticker-lift: 0 4px 6px rgba(18, 9, 7, 0.2), 0 34px 44px rgba(18, 9, 7, 0.45);
 
   /* glow */
-  --bfk-glow-ember: 0 0 70px rgba(200, 68, 31, 0.3);
-  --bfk-glow-ember-tight: 0 0 26px rgba(200, 68, 31, 0.45);
-  --bfk-glow-wine: 0 0 90px rgba(107, 22, 35, 0.55);
-  --bfk-glow-gold: 0 0 28px rgba(201, 166, 107, 0.32);
+  --bfk-glow-cherry: 0 0 70px rgba(181, 22, 26, 0.35);
+  --bfk-glow-cherry-tight: 0 0 26px rgba(181, 22, 26, 0.5);
+  --bfk-glow-wine: 0 0 90px rgba(85, 22, 25, 0.6);
+  --bfk-glow-olive: 0 0 28px rgba(201, 192, 138, 0.3);
 
   /* duration */
   --bfk-duration-instant: 120ms;
